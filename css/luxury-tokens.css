@@ -1,0 +1,96 @@
+/* ============================================================
+   UMER SURTI — VIP DEVELOPER PORTFOLIO
+   LUXURY DESIGN TOKENS & SYSTEM VARIABLES
+   ============================================================ */
+
+:root {
+  /* --- Luxury Core Palette --- */
+  --clr-espresso:        #171310;
+  --clr-espresso-deep:   #0d0a08;
+  --clr-espresso-card:   #1f1a16;
+  --clr-espresso-subtle: #26201b;
+
+  --clr-mocha:           #49372B;
+  --clr-mocha-dark:      #35271e;
+  --clr-mocha-glass:     rgba(73, 55, 43, 0.42);
+  --clr-mocha-card:      rgba(73, 55, 43, 0.28);
+  --clr-mocha-border:    rgba(73, 55, 43, 0.65);
+
+  --clr-bronze:          #98704F;
+  --clr-bronze-light:    #b68d6a;
+  --clr-bronze-dark:     #785336;
+  --clr-bronze-glow:     rgba(152, 112, 79, 0.45);
+  --clr-bronze-soft:     rgba(152, 112, 79, 0.15);
+  --clr-bronze-border:   rgba(152, 112, 79, 0.38);
+
+  --clr-champagne:       #D8C8AD;
+  --clr-champagne-light: #f5eedf;
+  --clr-champagne-glow:  rgba(216, 200, 173, 0.35);
+  --clr-champagne-soft:  rgba(216, 200, 173, 0.12);
+  --clr-champagne-muted: rgba(216, 200, 173, 0.72);
+  --clr-champagne-dim:   rgba(216, 200, 173, 0.40);
+
+  --clr-text-main:       #f5eedf;
+  --clr-text-secondary:  #D8C8AD;
+  --clr-text-muted:      rgba(216, 200, 173, 0.65);
+  --clr-text-dim:        rgba(216, 200, 173, 0.35);
+
+  /* --- Metallic Gradients --- */
+  --grad-champagne-bronze: linear-gradient(135deg, #f5eedf 0%, #D8C8AD 40%, #98704F 100%);
+  --grad-bronze-gold:      linear-gradient(135deg, #b68d6a 0%, #98704F 50%, #49372B 100%);
+  --grad-surface-card:     linear-gradient(145deg, rgba(73, 55, 43, 0.35) 0%, rgba(23, 19, 16, 0.75) 100%);
+  --grad-surface-glow:     radial-gradient(ellipse at 50% 0%, rgba(152, 112, 79, 0.22) 0%, transparent 70%);
+  --grad-border-bronze:    linear-gradient(135deg, rgba(216, 200, 173, 0.4) 0%, rgba(152, 112, 79, 0.6) 50%, rgba(73, 55, 43, 0.2) 100%);
+
+  /* --- Glassmorphism & Shadows --- */
+  --glass-bg:              rgba(31, 26, 22, 0.65);
+  --glass-bg-hover:        rgba(73, 55, 43, 0.48);
+  --glass-border:          rgba(152, 112, 79, 0.24);
+  --glass-border-hover:    rgba(216, 200, 173, 0.55);
+  --glass-blur:            blur(20px);
+
+  --shadow-sm:             0 4px 12px rgba(13, 10, 8, 0.4);
+  --shadow-md:             0 8px 24px rgba(13, 10, 8, 0.6);
+  --shadow-lg:             0 16px 40px rgba(13, 10, 8, 0.75);
+  --shadow-vip-glow:       0 0 35px rgba(152, 112, 79, 0.25), 0 10px 30px rgba(13, 10, 8, 0.85);
+  --shadow-champagne-glow: 0 0 25px rgba(216, 200, 173, 0.28);
+
+  /* --- Typography --- */
+  --font-display:          'Cinzel', 'Syne', serif;
+  --font-sans:             'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono:             'JetBrains Mono', 'Fira Code', monospace;
+
+  /* --- Fluid Typography Scale --- */
+  --fs-xs:    clamp(0.72rem, 0.9vw, 0.80rem);
+  --fs-sm:    clamp(0.84rem, 1.1vw, 0.92rem);
+  --fs-base:  clamp(0.96rem, 1.3vw, 1.05rem);
+  --fs-md:    clamp(1.10rem, 1.6vw, 1.25rem);
+  --fs-lg:    clamp(1.25rem, 2.0vw, 1.50rem);
+  --fs-xl:    clamp(1.50rem, 2.8vw, 1.95rem);
+  --fs-2xl:   clamp(1.75rem, 3.8vw, 2.65rem);
+  --fs-3xl:   clamp(2.20rem, 5.2vw, 3.50rem);
+  --fs-hero:  clamp(2.35rem, 8.2vw, 6.20rem);
+
+  /* --- Spacing --- */
+  --sp-2xs:   0.25rem;
+  --sp-xs:    0.50rem;
+  --sp-sm:    0.75rem;
+  --sp-md:    1.00rem;
+  --sp-lg:    1.50rem;
+  --sp-xl:    2.00rem;
+  --sp-2xl:   3.00rem;
+  --sp-3xl:   4.50rem;
+  --sp-sec:   clamp(4rem, 8vh, 7.5rem);
+
+  /* --- Layout & Radii --- */
+  --container-max: 1240px;
+  --radius-sm:     8px;
+  --radius-md:     14px;
+  --radius-lg:     22px;
+  --radius-pill:   9999px;
+
+  /* --- Transitions --- */
+  --tr-fast:       0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --tr-smooth:     0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --tr-slow:       0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}

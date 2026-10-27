@@ -1,0 +1,27 @@
+{
+  "name": "umer-surti-vip-portfolio",
+  "version": "1.0.0",
+  "description": "Ultra-Premium VIP Developer Portfolio for Umer Surti",
+  "main": "index.html",
+  "scripts": {
+    "build": "node -c js/app.js && node -c js/animations.js && node -c js/three-particles.js",
+    "start": "npx serve . -l 3000",
+    "preview": "npx serve . -l 3000",
+    "lint": "node -c js/app.js js/animations.js js/three-particles.js",
+    "test": "node -c js/app.js && node -c js/animations.js && node -c js/three-particles.js"
+  },
+  "keywords": [
+    "umer-surti",
+    "vip-portfolio",
+    "threejs",
+    "gsap",
+    "luxury-web-design",
+    "front-end-engineer"
+  ],
+  "author": "Umer Surti",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/umersurti17-svg/final-portfolio.git"
+  }
+}

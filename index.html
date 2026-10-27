@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Umer Surti | Ultra-Premium VIP Developer Portfolio</title>
+  
+  <!-- SEO & Brand Metadata -->
+  <meta name="description" content="Portfolio of Umer Surti — Creative Web Designer and Front-End Developer crafting bespoke cinematic digital experiences at the intersection of design, motion, and code.">
+  <meta name="keywords" content="Umer Surti, Creative Developer, Front-End Engineer, Web Design, UI/UX Designer, GSAP, Three.js, Luxury Portfolio, WebGL">
+  <meta name="author" content="Umer Surti">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="assets/images/profile.jpg">
+
+  <!-- Google Fonts: Cinzel (Luxury Serif), Outfit (Geometric Sans), JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Core Luxury Stylesheets -->
+  <link rel="stylesheet" href="css/luxury-tokens.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       SITE HEADER NAVIGATION
+       ============================================================ -->
+  <header class="site-header" id="site-header">
+    <div class="container header-container">
+      <a href="#hero" class="brand-monogram" aria-label="Umer Surti Home">
+        <div class="monogram-badge">U</div>
+        <div class="brand-text">UMER<span>.</span></div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action & Mobile Toggle -->
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn--champagne btn--sm btn-shimmer" id="nav-cta-btn">
+          Let's Talk
+        </a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Open Navigation Menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <aside class="mobile-menu" id="mobile-menu" aria-label="Mobile Navigation Menu">
+    <div class="brand-text" style="margin-bottom: 1.5rem;">UMER<span> SURTI</span></div>
+    <ul class="mobile-nav-links">
+      <li><a href="#hero" class="mobile-nav-link">01. Home</a></li>
+      <li><a href="#about" class="mobile-nav-link">02. About</a></li>
+      <li><a href="#skills" class="mobile-nav-link">03. Skills</a></li>
+      <li><a href="#projects" class="mobile-nav-link">04. Projects</a></li>
+      <li><a href="#education" class="mobile-nav-link">05. Education</a></li>
+      <li><a href="#contact" class="mobile-nav-link">06. Contact</a></li>
+    </ul>
+    <div style="margin-top: 1.5rem;">
+      <a href="#contact" class="btn btn--champagne btn-shimmer" style="width: 100%;">Initiate Project</a>
+    </div>
+  </aside>
+  <!-- Mobile Drawer Backdrop Overlay -->
+  <div class="mobile-backdrop" id="mobile-backdrop" aria-hidden="true"></div>
+
+  <!-- ============================================================
+       01 // ULTRA-PREMIUM CINEMATIC HERO SECTION
+       ============================================================ -->
+  <section class="hero-section" id="hero">
+    <!-- Atmospheric Three.js Particles, Light Trails & Depth Canvas -->
+    <canvas id="hero-particle-canvas"></canvas>
+    <div class="hero-light-beam"></div>
+    <div class="hero-vignette"></div>
+
+    <div class="container hero-container">
+      <div class="hero-layout">
+        <!-- Left Column: Main Visual Focus & Narrative (Enters from Left) -->
+        <div class="hero-text-col hero-enter-left">
+          <!-- VIP Availability Pill -->
+          <div class="vip-status-pill anim-breathe">
+            <span class="status-indicator-dot"></span>
+            <span>Available for Select Commissions</span>
+          </div>
+
+          <!-- Main Visual Focus -->
+          <h1 class="hero-title">
+            <span class="hero-name-first">UMER</span>
+            <span class="hero-name-last">SURTI</span>
+          </h1>
+
+          <!-- Developer Tagline -->
+          <p class="hero-tagline">
+            Creative Web Designer &amp; Front-End Developer crafting bespoke digital experiences with cinematic 3D motion, refined aesthetics, and modern web architecture.
+          </p>
+
+          <!-- Interactive Action Buttons -->
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn--champagne btn-shimmer magnetic">
+              <i class="fa-solid fa-arrow-trend-up"></i> Explore My Work
+            </a>
+            <a href="#contact" class="btn btn--ghost btn-shimmer magnetic">
+              <i class="fa-regular fa-paper-plane"></i> Contact Me
+            </a>
+          </div>
+
+          <!-- Highlights Pills -->
+          <div class="hero-highlights">
+            <div class="hero-hl-pill">
+              <i class="fa-solid fa-code"></i>
+              <span>Front-End Engineer</span>
+            </div>
+            <div class="hero-hl-pill">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+              <span>GSAP &amp; WebGL Motion</span>
+            </div>
+            <div class="hero-hl-pill">
+              <i class="fa-solid fa-gem"></i>
+              <span>Luxury UI/UX</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Profile Image Area (Enters from Right) -->
+        <div class="hero-visual-col hero-enter-right">
+          <div class="hero-portrait-stage">
+            <div class="hero-ambient-glow"></div>
+            <div class="hero-portrait-card tilt-card anim-float">
+              <div class="hero-card-border-glow"></div>
+              <div class="hero-card-glass-frame">
+                <div class="hero-portrait-img-wrap">
+                  <img src="assets/images/profile.jpg" alt="Portrait of Umer Surti" class="hero-portrait-img" loading="eager">
+                </div>
+              </div>
+              <!-- Floating VIP Monogram & Metric Seal -->
+              <div class="hero-floating-badge anim-float-lag">
+                <div class="badge-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                <div class="badge-text">
+                  <span class="badge-title">VIP Developer</span>
+                  <span class="badge-sub">20+ Delivered Works</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Subtle Scroll Indicator at Bottom of Hero -->
+    <a href="#about" class="hero-scroll-indicator" id="hero-scroll-indicator" aria-label="Scroll to discover Umer Surti portfolio">
+      <span class="scroll-indicator-text">Scroll to Discover</span>
+      <div class="scroll-mouse-icon">
+        <div class="scroll-wheel-dot"></div>
+      </div>
+      <i class="fa-solid fa-chevron-down scroll-arrow-icon"></i>
+    </a>
+  </section>
+
+  <!-- ============================================================
+       02 // ABOUT ME SECTION
+       ============================================================ -->
+  <section class="section-padding about-section" id="about">
+    <div class="container">
+      <div class="about-layout">
+        <!-- Profile Visual Column (Enters from Left) -->
+        <div class="about-visual about-enter-left">
+          <div class="about-portrait-stage">
+            <div class="about-ambient-glow"></div>
+            <div class="about-portrait-card tilt-card">
+              <div class="about-card-glass-frame">
+                <div class="about-portrait-img-wrap">
+                  <img src="assets/images/profile.jpg" alt="Portrait of Umer Surti" class="about-portrait-img" loading="lazy">
+                </div>
+              </div>
+              <!-- Subtle decorative badge -->
+              <div class="about-floating-seal anim-float">
+                <div class="seal-icon"><i class="fa-solid fa-code"></i></div>
+                <div class="seal-meta">
+                  <span class="seal-title">Creative Developer</span>
+                  <span class="seal-sub">Digital Craftsmanship</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Narrative & Highlights Column (Enters from Right) -->
+        <div class="about-narrative about-enter-right">
+          <div class="about-header-meta">
+            <span class="section-tag">ABOUT ME</span>
+            <h2 class="about-title">Turning Ideas Into <em>Digital Experiences</em></h2>
+          </div>
+
+          <!-- Professional editable introduction -->
+          <div class="about-bio-text">
+            <p class="about-text">
+              I am a passionate creative developer dedicated to crafting modern, interactive, and high-performance web experiences. Combining contemporary design principles with clean and maintainable code, I focus on transforming creative concepts into engaging digital interfaces tailored for the web.
+            </p>
+            <p class="about-text">
+              Always eager to explore emerging web technologies, smooth motion choreography, and intuitive user experiences to deliver bespoke digital products with exceptional craft.
+            </p>
+          </div>
+
+          <!-- 3 Compact Highlight Cards -->
+          <div class="about-highlights-row">
+            <div class="about-highlight-card tilt-card">
+              <div class="hl-card-icon"><i class="fa-solid fa-lightbulb"></i></div>
+              <h3 class="hl-card-title">Creative Thinking</h3>
+              <p class="hl-card-desc">Approaching interface design and digital aesthetics with fresh perspectives and meticulous attention to detail.</p>
+            </div>
+
+            <div class="about-highlight-card tilt-card">
+              <div class="hl-card-icon"><i class="fa-solid fa-puzzle-piece"></i></div>
+              <h3 class="hl-card-title">Problem Solving</h3>
+              <p class="hl-card-desc">Translating complex interactive challenges into clean, accessible, and responsive front-end architecture.</p>
+            </div>
+
+            <div class="about-highlight-card tilt-card">
+              <div class="hl-card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+              <h3 class="hl-card-title">Continuous Learning</h3>
+              <p class="hl-card-desc">Staying curious and continuously experimenting with new technologies, modern frameworks, and motion tools.</p>
+            </div>
+          </div>
+
+          <!-- Action Button -->
+          <div class="about-actions">
+            <a href="#projects" class="btn btn--champagne btn-shimmer magnetic">
+              <i class="fa-solid fa-arrow-trend-up"></i> Explore My Projects
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       03 // MY SKILLS SECTION
+       ============================================================ -->
+  <section class="section-padding skills-section" id="skills">
+    <div class="container">
+      <!-- Section Header -->
+      <div class="text-center skills-header">
+        <span class="section-tag">MY SKILLS</span>
+        <h2 class="section-title">Tools I Use to Bring <em>Ideas to Life</em></h2>
+        <p class="section-sub">
+          A curated ecosystem of modern web technologies, creative motion frameworks, and digital tools engineered for high-performance experiences.
+        </p>
+      </div>
+
+      <!-- 4 Categories Organized in a Balanced 2x2 Grid -->
+      <div class="skills-showcase-grid">
+        
+        <!-- Category 1: Frontend Development (Alternating Left) -->
+        <div class="skill-category-card skill-cat-left tilt-card">
+          <div class="cat-card-header">
+            <div class="cat-header-left">
+              <div class="cat-icon-wrap"><i class="fa-solid fa-code"></i></div>
+              <h3 class="cat-title">Frontend Development</h3>
+            </div>
+            <span class="cat-count-badge">5 Stacks</span>
+          </div>
+
+          <div class="skill-items-list">
+            <!-- HTML5 -->
+            <div class="skill-item-row">
+              <div class="skill-item-top">
+                <div class="skill-item-meta">
+                  <i class="fa-brands fa-html5 skill-item-icon"></i>
+                  <span class="skill-item-name">HTML5</span>
+                </div>
+                <span class="skill-item-badge">Core Architecture</span>
+              </div>
+              <p class="skill-item-desc">Semantic, accessible, and SEO-optimized markup structure.</p>
+              <div class="skill-bar-track"><div class="skill-bar-glow"></div></div>
+            </div>
+
+            <!-- CSS3 -->
+            <div class="skill-item-row">
+              <div class="skill-item-top">
+                <div class="skill-item-meta">
+                  <i class="fa-brands fa-css3-alt skill-item-icon"></i>
+                  <span class="skill-item-name">CSS3 &amp; Modern Layouts</span>
+                </div>
+                <span class="skill-item-badge">Modern Styling</span>
+              </div>
+              <p class="skill-item-desc">Responsive layouts with Flexbox, CSS Grid, and custom design tokens.</p>
+              <div class="skill-bar-track"><div class="skill-bar-glow"></div></div>
+            </div>
+
+            <!-- JavaScript -->
+            <div class="skill-item-row">
+              <div class="skill-item-top">
+                <div class="skill-item-meta">
+                  <i class="fa-brands fa-js skill-item-icon"></i>
+                  <span class="skill-item-name">JavaScript (ES6+)</span>
+                </div>
+                <span class="skill-item-badge">Interactive Logic</span>
+              </div>
+              <p class="skill-item-desc">Modern asynchronous features, DOM APIs, and state handling.</p>
+              <div class="skill-bar-track"><div class="skill-bar-glow"></div></div>
+            </div>
+
+            <!-- React -->
+            <div class="skill-item-row">
+              <div class="skill-item-top">
+                <div class="skill-item-meta">
+                  <i class="fa-brands fa-react skill-item-icon"></i>
+                  <span class="skill-item-name">React.js</span>
+                </div>
+                <span class="skill-item-badge">UI Architecture</span>
+              </div>
+              <p class="skill-item-desc">Reusable component-driven interfaces and predictable application state.</p>
+              <div class="skill-bar-track"><div class="skill-bar-glow"></div></div>
+            </div>
+
+            <!-- Tailwind & Bootstrap -->
+            <div class="skill-item-row">
+              <div class="skill-item-top">
+                <div class="skill-item-meta">
+                  <i class="fa-solid fa-layer-group skill-item-icon"></i>
+                  <span class="skill-item-name">Tailwind &amp; Bootstrap</span>
+                </div>
+                <span class="skill-item-badge">Utility Frameworks</span>
+              </div>
+              <p class="skill-item-desc">Rapid design systems and structured responsive grid utilities.</p>
+              <div class="skill-bar-track"><div class="skill-bar-glow"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2: Creative & Interactive (Alternating Right) -->
+        <div class="skill-category-card skill-cat-right tilt-card">
+          <div class="cat-card-header">
+            <div class="cat-header-left">
+              <div class="cat-icon-wrap"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+              <h3 class="cat-title">Creative &amp; Interactive</h3>
+            </div>
+            <span class="cat-count-badge">4 Stacks</span>
+          </div>
+
+          <div class="skill-items-list">
+            <!-- GSAP -->
+            <div class="skill-item-row">
+              <div class="skill-item-top">
+                <div class="skill-item-meta">
+                  <i class="fa-solid fa-play skill-item-icon"></i>
+                  <span class="skill-item-name">GSAP &amp; ScrollTrigger</span>
+                </div>
+                <span class="skill-item-badge">Motion Choreography</span>
+              </div>
+              <p class="skill-item-desc">Cinematic scroll-linked timelines, staggers, and buttery transforms.</p>
+              <div class="skill-bar-track"><div class="skill-bar-glow"></div></div>
+            </div>
+
+            <!-- Three.js -->
+            <div class="skill-item-row">
+              <div class="skill-item-top">
+                <div class="skill-item-meta">
+                  <i class="fa-solid fa-cube skill-item-icon"></i>
+                  <span class="skill-item-name">Three.js &amp; WebGL</span>
+                </div>
+                <span class="skill-item-badge">3D Real-Time</span>
+              </div>
+              <p class="skill-item-desc">Spatial scene geometry, atmospheric lighting, and particle constellations.</p>
+              <div class="skill-bar-track"><div class="skill-bar-glow"></div></div>
+            </div>
+
+            <!-- UI/UX -->
+            <div class="skill-item-row">
+              <div class="skill-item-top">
+                <div class="skill-item-meta">
+                  <i class="fa-solid fa-compass-drafting skill-item-icon"></i>
+                  <span class="skill-item-name">UI/UX Interface Design</span>
+                </div>
+                <span class="skill-item-badge">Visual Craft</span>
+              </div>
+              <p class="skill-item-desc">Sculpted typography hierarchy, glassmorphism, and luxury dark aesthetics.</p>
+              <div class="skill-bar-track"><div class="skill-bar-glow"></div></div>
+            </div>
+
+            <!-- Micro-Interactions -->
+            <div class="skill-item-row">
+              <div class="skill-item-top">
+                <div class="skill-item-meta">
+                  <i class="fa-solid fa-bolt skill-item-icon"></i>
+                  <span class="skill-item-name">Micro-Interactions</span>
+                </div>
+                <span class="skill-item-badge">Tactile Depth</span>
+              </div>
+              <p class="skill-item-desc">Magnetic hover pull, 3D card tilts, specular shines, and Lenis scroll inertia.</p>
+              <div class="skill-bar-track"><div class="skill-bar-glow"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 3: Backend Development (Alternating Left) -->
+        <div class="skill-category-card skill-cat-left tilt-card">
+          <div class="cat-card-header">
+            <div class="cat-header-left">
+              <div class="cat-icon-wrap"><i class="fa-solid fa-server"></i></div>
+              <h3 class="cat-title">Backend Development</h3>
+            </div>
+            <span class="cat-count-badge">3 Stacks</span>
+          </div>
+
+          <div class="skill-items-list">
+            <!-- Node.js & npm -->
+            <div class="skill-item-row">
+              <div class="skill-item-top">
+                <div class="skill-item-meta">
+                  <i class="fa-brands fa-node-js skill-item-icon"></i>
+                  <span class="skill-item-name">Node.js &amp; npm</span>
+                </div>
+                <span class="skill-item-badge">Runtime &amp; Packages</span>
+              </div>
+              <p class="skill-item-desc">JavaScript runtime fundamentals, package dependencies, and local tooling.</p>
+              <div class="skill-bar-track"><div class="skill-bar-glow"></div></div>
+            </div>
+
+            <!-- REST APIs -->
+            <div class="skill-item-row">
+              <div class="skill-item-top">
+                <div class="skill-item-meta">
+                  <i class="fa-solid fa-network-wired skill-item-icon"></i>
+                  <span class="skill-item-name">RESTful API Integration</span>
+                </div>
+                <span class="skill-item-badge">Data Exchange</span>
+              </div>
+              <p class="skill-item-desc">Asynchronous client-server communication, JSON parsing, and endpoints.</p>
+              <div class="skill-bar-track"><div class="skill-bar-glow"></div></div>
+            </div>
+
+            <!-- Database Concepts (Editable Placeholder) -->
+            <div class="skill-item-row">
+              <div class="skill-item-top">
+                <div class="skill-item-meta">
+                  <i class="fa-solid fa-database skill-item-icon"></i>
+                  <span class="skill-item-name">Data Architecture (Placeholder)</span>
+                </div>
+                <span class="skill-item-badge">Data Layer</span>
+              </div>
+              <p class="skill-item-desc">Understanding structured relational schemas and document store paradigms.</p>
+              <div class="skill-bar-track"><div class="skill-bar-glow"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 4: Tools & Technologies (Alternating Right) -->
+        <div class="skill-category-card skill-cat-right tilt-card">
+          <div class="cat-card-header">
+            <div class="cat-header-left">
+              <div class="cat-icon-wrap"><i class="fa-solid fa-sliders"></i></div>
+              <h3 class="cat-title">Tools &amp; Technologies</h3>
+            </div>
+            <span class="cat-count-badge">4 Stacks</span>
+          </div>
+
+          <div class="skill-items-list">
+            <!-- Git & GitHub -->
+            <div class="skill-item-row">
+              <div class="skill-item-top">
+                <div class="skill-item-meta">
+                  <i class="fa-brands fa-github skill-item-icon"></i>
+                  <span class="skill-item-name">Git &amp; GitHub</span>
+                </div>
+                <span class="skill-item-badge">Version Control</span>
+              </div>
+              <p class="skill-item-desc">Collaborative version tracking, branching strategies, and repository control.</p>
+              <div class="skill-bar-track"><div class="skill-bar-glow"></div></div>
+            </div>
+
+            <!-- Figma -->
+            <div class="skill-item-row">
+              <div class="skill-item-top">
+                <div class="skill-item-meta">
+                  <i class="fa-brands fa-figma skill-item-icon"></i>
+                  <span class="skill-item-name">Figma Prototyping</span>
+                </div>
+                <span class="skill-item-badge">Design Systems</span>
+              </div>
+              <p class="skill-item-desc">High-fidelity wireframes, interactive user flows, and responsive UI specs.</p>
+              <div class="skill-bar-track"><div class="skill-bar-glow"></div></div>
+            </div>
+
+            <!-- VS Code -->
+            <div class="skill-item-row">
+              <div class="skill-item-top">
+                <div class="skill-item-meta">
+                  <i class="fa-solid fa-terminal skill-item-icon"></i>
+                  <span class="skill-item-name">VS Code &amp; DevTools</span>
+                </div>
+                <span class="skill-item-badge">Workspace</span>
+              </div>
+              <p class="skill-item-desc">Rapid code authoring, linting, formatting, and browser console debugging.</p>
+              <div class="skill-bar-track"><div class="skill-bar-glow"></div></div>
+            </div>
+
+            <!-- Performance Optimization -->
+            <div class="skill-item-row">
+              <div class="skill-item-top">
+                <div class="skill-item-meta">
+                  <i class="fa-solid fa-gauge-high skill-item-icon"></i>
+                  <span class="skill-item-name">Performance Optimization</span>
+                </div>
+                <span class="skill-item-badge">Core Web Vitals</span>
+              </div>
+              <p class="skill-item-desc">Lighthouse auditing, asset minification, 60fps rendering, and smooth memory.</p>
+              <div class="skill-bar-track"><div class="skill-bar-glow"></div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       04 // FEATURED PROJECTS SECTION
+       ============================================================ -->
+  <section class="section-padding projects-section" id="projects">
+    <div class="container">
+      <!-- Section Header -->
+      <div class="text-center projects-header">
+        <span class="section-tag">CURATED PORTFOLIO</span>
+        <h2 class="section-title">FEATURED <em>PROJECTS</em></h2>
+        <p class="section-sub">A Selection of My Work</p>
+      </div>
+
+      <!-- Responsive Grid with Balanced Spacing & Equal Height Cards -->
+      <div class="projects-showcase-grid">
+
+        <!-- Project 1: Velasco Couture (Enters from Left) -->
+        <div class="project-grid-item project-item-left">
+          <article class="project-showcase-card tilt-card">
+            <!-- Project Media / Preview Area -->
+            <div class="project-media-wrap">
+              <img src="assets/images/project1.jpg" alt="Velasco Couture Luxury E-Commerce Platform" class="project-card-img" loading="lazy">
+              <div class="project-media-overlay">
+                <button type="button" class="project-quick-preview-btn" onclick="openCaseStudy('Velasco Couture', 'Luxury E-Commerce', 'An award-winning haute couture digital flagship designed with WebGL cloth ripple shaders, seamless cart orchestration, and sub-second asset transitions.', 'React, GSAP, Three.js, CSS Grid', 'assets/images/project1.jpg', 'https://github.com/umersurti17-svg')" aria-label="Preview Velasco Couture">
+                  <i class="fa-solid fa-expand"></i> Quick Preview
+                </button>
+              </div>
+              <span class="project-floating-badge">E-Commerce</span>
+            </div>
+
+            <!-- Project Content Body -->
+            <div class="project-card-body">
+              <div class="project-category-row">
+                <span class="project-cat-label">Haute Horlogerie &amp; Fashion</span>
+                <span class="project-number-label">01</span>
+              </div>
+
+              <h3 class="project-card-title">Velasco Couture</h3>
+              
+              <p class="project-card-desc">
+                A high-end digital flagship showcasing curated garments through WebGL smooth scroll transitions, dynamic lighting, and responsive micro-interactions.
+              </p>
+
+              <!-- Technology Tags -->
+              <div class="project-tech-tags">
+                <span class="project-tech-tag">React</span>
+                <span class="project-tech-tag">GSAP</span>
+                <span class="project-tech-tag">Three.js</span>
+                <span class="project-tech-tag">CSS Grid</span>
+              </div>
+
+              <!-- Functional Action Links -->
+              <div class="project-card-actions">
+                <button type="button" class="btn btn--champagne btn--sm btn-shimmer project-btn" onclick="openCaseStudy('Velasco Couture', 'Luxury E-Commerce', 'An award-winning haute couture digital flagship designed with WebGL cloth ripple shaders, seamless cart orchestration, and sub-second asset transitions.', 'React, GSAP, Three.js, CSS Grid', 'assets/images/project1.jpg', 'https://github.com/umersurti17-svg')">
+                  <span>View Project</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </button>
+                <!-- Editable repository link: currently directed to verified GitHub profile -->
+                <a href="https://github.com/umersurti17-svg" target="_blank" rel="noopener noreferrer" class="btn btn--ghost btn--sm project-btn" title="View Code on GitHub (Replace with specific repository URL)">
+                  <i class="fa-brands fa-github"></i>
+                  <span>View Code</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Project 2: Aether Banking (Enters from Right) -->
+        <div class="project-grid-item project-item-right">
+          <article class="project-showcase-card tilt-card">
+            <!-- Project Media / Preview Area -->
+            <div class="project-media-wrap">
+              <img src="assets/images/project2.jpg" alt="Aether Banking Fintech App" class="project-card-img" loading="lazy">
+              <div class="project-media-overlay">
+                <button type="button" class="project-quick-preview-btn" onclick="openCaseStudy('Aether Banking', 'Fintech & Neo-Banking', 'Engineered an ultra-secure neo-banking dashboard featuring real-time encrypted data streams, dynamic asset balance graphs, and custom tactile dark UI surfaces.', 'JavaScript ES6+, WebGL, HTML5 Canvas, REST APIs', 'assets/images/project2.jpg', 'https://github.com/umersurti17-svg')" aria-label="Preview Aether Banking">
+                  <i class="fa-solid fa-expand"></i> Quick Preview
+                </button>
+              </div>
+              <span class="project-floating-badge">Fintech UX</span>
+            </div>
+
+            <!-- Project Content Body -->
+            <div class="project-card-body">
+              <div class="project-category-row">
+                <span class="project-cat-label">Fintech &amp; Wealth Management</span>
+                <span class="project-number-label">02</span>
+              </div>
+
+              <h3 class="project-card-title">Aether Banking</h3>
+              
+              <p class="project-card-desc">
+                A next-generation wealth management interface delivering real-time portfolio analytics, fluid transactional cards, and institutional-grade dark aesthetics.
+              </p>
+
+              <!-- Technology Tags -->
+              <div class="project-tech-tags">
+                <span class="project-tech-tag">JavaScript (ES6+)</span>
+                <span class="project-tech-tag">WebGL</span>
+                <span class="project-tech-tag">HTML5 Canvas</span>
+                <span class="project-tech-tag">REST APIs</span>
+              </div>
+
+              <!-- Functional Action Links -->
+              <div class="project-card-actions">
+                <button type="button" class="btn btn--champagne btn--sm btn-shimmer project-btn" onclick="openCaseStudy('Aether Banking', 'Fintech & Neo-Banking', 'Engineered an ultra-secure neo-banking dashboard featuring real-time encrypted data streams, dynamic asset balance graphs, and custom tactile dark UI surfaces.', 'JavaScript ES6+, WebGL, HTML5 Canvas, REST APIs', 'assets/images/project2.jpg', 'https://github.com/umersurti17-svg')">
+                  <span>View Project</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </button>
+                <!-- Editable repository link: currently directed to verified GitHub profile -->
+                <a href="https://github.com/umersurti17-svg" target="_blank" rel="noopener noreferrer" class="btn btn--ghost btn--sm project-btn" title="View Code on GitHub (Replace with specific repository URL)">
+                  <i class="fa-brands fa-github"></i>
+                  <span>View Code</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Project 3: Vertex Analytics (Enters from Left) -->
+        <div class="project-grid-item project-item-left">
+          <article class="project-showcase-card tilt-card">
+            <!-- Project Media / Preview Area -->
+            <div class="project-media-wrap">
+              <img src="assets/images/project3.jpg" alt="Vertex Analytics Dashboard" class="project-card-img" loading="lazy">
+              <div class="project-media-overlay">
+                <button type="button" class="project-quick-preview-btn" onclick="openCaseStudy('Vertex Analytics', 'Spatial Intelligence', 'A full-scale data observatory visualizing multi-node cloud clusters with interactive 3D particle nodes, dark luxury glass panels, and sub-16ms chart updates.', 'Three.js, GSAP 3, Web Workers, CSS3 Variables', 'assets/images/project3.jpg', 'https://github.com/umersurti17-svg')" aria-label="Preview Vertex Analytics">
+                  <i class="fa-solid fa-expand"></i> Quick Preview
+                </button>
+              </div>
+              <span class="project-floating-badge">Spatial Data</span>
+            </div>
+
+            <!-- Project Content Body -->
+            <div class="project-card-body">
+              <div class="project-category-row">
+                <span class="project-cat-label">Spatial Intelligence &amp; SaaS</span>
+                <span class="project-number-label">03</span>
+              </div>
+
+              <h3 class="project-card-title">Vertex Analytics</h3>
+              
+              <p class="project-card-desc">
+                An enterprise intelligence suite transforming complex multi-dimensional datasets into intuitive 3D spatial node topologies and live interactive metric charts.
+              </p>
+
+              <!-- Technology Tags -->
+              <div class="project-tech-tags">
+                <span class="project-tech-tag">React</span>
+                <span class="project-tech-tag">Three.js</span>
+                <span class="project-tech-tag">Figma</span>
+                <span class="project-tech-tag">Data Architecture</span>
+              </div>
+
+              <!-- Functional Action Links -->
+              <div class="project-card-actions">
+                <button type="button" class="btn btn--champagne btn--sm btn-shimmer project-btn" onclick="openCaseStudy('Vertex Analytics', 'Spatial Intelligence', 'A full-scale data observatory visualizing multi-node cloud clusters with interactive 3D particle nodes, dark luxury glass panels, and sub-16ms chart updates.', 'Three.js, GSAP 3, Web Workers, CSS3 Variables', 'assets/images/project3.jpg', 'https://github.com/umersurti17-svg')">
+                  <span>View Project</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </button>
+                <!-- Editable repository link: currently directed to verified GitHub profile -->
+                <a href="https://github.com/umersurti17-svg" target="_blank" rel="noopener noreferrer" class="btn btn--ghost btn--sm project-btn" title="View Code on GitHub (Replace with specific repository URL)">
+                  <i class="fa-brands fa-github"></i>
+                  <span>View Code</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       05 // MY JOURNEY (EDUCATION, CERTIFICATIONS, ACHIEVEMENTS)
+       ============================================================ -->
+  <section class="section-padding journey-section" id="education" style="background: radial-gradient(circle at 50% 40%, rgba(73, 55, 43, 0.16) 0%, transparent 75%);">
+    <div class="container">
+      <!-- Section Header -->
+      <div class="text-center journey-header">
+        <span class="section-tag">CHRONOLOGICAL PATH</span>
+        <h2 class="section-title">MY <em>JOURNEY</em></h2>
+        <p class="section-sub">Learning, Growing, and Building</p>
+      </div>
+
+      <!-- Interactive Category Filter Tabs -->
+      <div class="journey-filter-nav" role="tablist" aria-label="Journey filter categories">
+        <button type="button" class="journey-tab active" data-filter="all" role="tab" aria-selected="true">
+          <i class="fa-solid fa-layer-group"></i> All Journey
+        </button>
+        <button type="button" class="journey-tab" data-filter="education" role="tab" aria-selected="false">
+          <i class="fa-solid fa-graduation-cap"></i> Education
+        </button>
+        <button type="button" class="journey-tab" data-filter="certification" role="tab" aria-selected="false">
+          <i class="fa-solid fa-certificate"></i> Certifications
+        </button>
+        <button type="button" class="journey-tab" data-filter="achievement" role="tab" aria-selected="false">
+          <i class="fa-solid fa-trophy"></i> Achievements
+        </button>
+      </div>
+
+      <!-- Refined Vertical Timeline -->
+      <div class="timeline-wrap" id="education-timeline">
+        <!-- Vertical Drawing Spine -->
+        <div class="timeline-spine">
+          <div class="timeline-spine-fill" id="timeline-spine-fill"></div>
+        </div>
+
+        <!-- 1. Education: Bachelor of Science (Enters from Left) -->
+        <div class="timeline-item timeline-item-left" data-category="education">
+          <div class="timeline-dot" title="Education milestone"></div>
+          <div class="timeline-card tilt-card">
+            <div class="tl-card-header">
+              <span class="tl-category-badge tl-badge-edu">
+                <i class="fa-solid fa-graduation-cap"></i> Education
+              </span>
+              <span class="tl-year-badge">2018 — 2021</span>
+            </div>
+            <h3 class="timeline-role">Bachelor of Science in Computer Science</h3>
+            <div class="timeline-institution">
+              <i class="fa-solid fa-building-columns"></i> Institute of Technology &amp; Digital Sciences
+            </div>
+            <p class="timeline-desc">
+              Specialized in Web Engineering, Algorithms, and Software Architecture. Graduated with honors, focusing thesis on web application responsiveness and rendering optimizations.
+            </p>
+          </div>
+        </div>
+
+        <!-- 2. Education: Master Course (Enters from Right) -->
+        <div class="timeline-item right timeline-item-right" data-category="education">
+          <div class="timeline-dot" title="Education milestone"></div>
+          <div class="timeline-card tilt-card">
+            <div class="tl-card-header">
+              <span class="tl-category-badge tl-badge-edu">
+                <i class="fa-solid fa-graduation-cap"></i> Education
+              </span>
+              <span class="tl-year-badge">2021 — 2022</span>
+            </div>
+            <h3 class="timeline-role">Master Course in UI/UX &amp; Creative Engineering</h3>
+            <div class="timeline-institution">
+              <i class="fa-solid fa-building-columns"></i> Interactive Media Academy
+            </div>
+            <p class="timeline-desc">
+              Advanced specialization in creative coding, GSAP motion choreography, WebGL shaders, Three.js spatial scenes, and human-computer ergonomics.
+            </p>
+          </div>
+        </div>
+
+        <!-- 3. Certification: Clearly Editable Placeholder (Enters from Left) -->
+        <div class="timeline-item timeline-item-left" data-category="certification">
+          <div class="timeline-dot" title="Certification milestone"></div>
+          <div class="timeline-card tilt-card">
+            <div class="tl-card-header">
+              <span class="tl-category-badge tl-badge-cert">
+                <i class="fa-solid fa-certificate"></i> Certification
+              </span>
+              <span class="tl-year-badge">[Year]</span>
+            </div>
+            <h3 class="timeline-role">[Your Qualification]</h3>
+            <div class="timeline-institution">
+              <i class="fa-solid fa-award"></i> [Institution Name]
+            </div>
+            <p class="timeline-desc">
+              Specialized professional certification in frontend architecture, modern frameworks, or web accessibility. (Editable placeholder to showcase verified credentials).
+            </p>
+          </div>
+        </div>
+
+        <!-- 4. Achievement: Commercial Practice & Commissions (Enters from Right) -->
+        <div class="timeline-item right timeline-item-right" data-category="achievement">
+          <div class="timeline-dot" title="Achievement milestone"></div>
+          <div class="timeline-card tilt-card">
+            <div class="tl-card-header">
+              <span class="tl-category-badge tl-badge-achieve">
+                <i class="fa-solid fa-trophy"></i> Achievement
+              </span>
+              <span class="tl-year-badge">2022 — Present</span>
+            </div>
+            <h3 class="timeline-role">Commercial Practice &amp; Digital Commissions</h3>
+            <div class="timeline-institution">
+              <i class="fa-solid fa-briefcase"></i> Independent Creative Developer
+            </div>
+            <p class="timeline-desc">
+              Partnering with luxury boutiques, startups, and agencies to build award-worthy, high-performance portfolios and web applications delivering over 20+ bespoke digital solutions.
+            </p>
+          </div>
+        </div>
+
+        <!-- 5. Achievement: Clearly Editable Placeholder (Enters from Left) -->
+        <div class="timeline-item timeline-item-left" data-category="achievement">
+          <div class="timeline-dot" title="Achievement milestone"></div>
+          <div class="timeline-card tilt-card">
+            <div class="tl-card-header">
+              <span class="tl-category-badge tl-badge-achieve">
+                <i class="fa-solid fa-star"></i> Achievement
+              </span>
+              <span class="tl-year-badge">[Year]</span>
+            </div>
+            <h3 class="timeline-role">[Your Achievement / Award]</h3>
+            <div class="timeline-institution">
+              <i class="fa-solid fa-medal"></i> [Institution Name]
+            </div>
+            <p class="timeline-desc">
+              Recognition for outstanding creative computing, hackathon excellence, or open-source community contribution. (Editable placeholder for personal accolades).
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       06 // LET'S CONNECT (CONTACT SECTION)
+       ============================================================ -->
+  <section class="section-padding contact-section" id="contact">
+    <div class="container">
+      <!-- Section Header -->
+      <div class="text-center contact-header">
+        <span class="section-tag">GET IN TOUCH</span>
+        <h2 class="section-title">LET'S <em>CONNECT</em></h2>
+        <p class="section-sub">Have an Idea? Let's Build Something Great.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Left Column: Contact Channels & Verified Details -->
+        <div class="contact-channels">
+          <div class="contact-card-box tilt-card">
+            <div class="contact-box-header">
+              <span class="contact-badge-pill">DIRECT CHANNELS</span>
+              <h3 class="contact-box-title">Start a Conversation</h3>
+              <p class="contact-box-sub">
+                Feel free to reach out for new projects, creative engineering commissions, or technical consultations.
+              </p>
+            </div>
+            
+            <!-- Email (Editable placeholder) -->
+            <a href="mailto:umer.surti@example.com" class="contact-method" title="Email Umer Surti (Replace with your verified email)">
+              <div class="method-icon"><i class="fa-regular fa-envelope"></i></div>
+              <div class="method-meta">
+                <span class="lbl">Email Address</span>
+                <span class="val">umer.surti@example.com</span>
+              </div>
+            </a>
+
+            <!-- Location / Timezone (Editable placeholder) -->
+            <div class="contact-method">
+              <div class="method-icon"><i class="fa-solid fa-earth-americas"></i></div>
+              <div class="method-meta">
+                <span class="lbl">Location &amp; Timezone</span>
+                <span class="val">[City, Country] / Remote Worldwide</span>
+              </div>
+            </div>
+
+            <!-- Response Window -->
+            <div class="contact-method">
+              <div class="method-icon"><i class="fa-regular fa-clock"></i></div>
+              <div class="method-meta">
+                <span class="lbl">Response Window</span>
+                <span class="val">Typically within 24–48 hours</span>
+              </div>
+            </div>
+
+            <!-- Social & Professional Networks -->
+            <div class="social-networks-wrap">
+              <span class="form-label">Professional Networks</span>
+              <div class="socials-row">
+                <!-- Authentic GitHub Profile from Project Remote -->
+                <a href="https://github.com/umersurti17-svg" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub Profile: umersurti17-svg" title="GitHub: umersurti17-svg">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+                <!-- Editable LinkedIn Placeholder -->
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn Profile (Editable Link)" title="LinkedIn Profile (Replace with your profile URL)">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <!-- Editable Behance Placeholder -->
+                <a href="https://behance.net" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Behance Portfolio (Editable Link)" title="Behance Portfolio (Replace with your portfolio URL)">
+                  <i class="fa-brands fa-behance"></i>
+                </a>
+                <!-- Editable Dribbble Placeholder -->
+                <a href="https://dribbble.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Dribbble Showcase (Editable Link)" title="Dribbble Showcase (Replace with your profile URL)">
+                  <i class="fa-brands fa-dribbble"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Availability Status Card -->
+          <div class="location-info-card">
+            <div class="loc-badge">
+              <i class="fa-solid fa-circle-check"></i> 🟢 COMMISSIONS STATUS: AVAILABLE
+            </div>
+            <div class="loc-status">
+              Currently accepting select digital commissions and creative web development projects. Prioritizing experiences with high visual craft and motion engineering.
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Premium Contact Form -->
+        <div class="contact-form-container">
+          <form class="contact-form tilt-card" id="contact-form" novalidate>
+            <div class="form-header-intro">
+              <h3 class="form-heading">Send a Message</h3>
+              <p class="form-subheading">Fill out the form below to initiate dialogue regarding your vision.</p>
+            </div>
+
+            <!-- Name and Email Row -->
+            <div class="form-row-dual">
+              <!-- Name Field -->
+              <div class="form-group" id="group-name">
+                <label for="contact-name" class="form-label">Your Name <span class="required-star">*</span></label>
+                <input type="text" id="contact-name" name="name" class="form-input" placeholder="e.g. Alex Morgan" required autocomplete="name">
+                <span class="form-error" id="name-error" aria-live="polite"></span>
+              </div>
+
+              <!-- Email Field -->
+              <div class="form-group" id="group-email">
+                <label for="contact-email" class="form-label">Email Address <span class="required-star">*</span></label>
+                <input type="email" id="contact-email" name="email" class="form-input" placeholder="name@domain.com" required autocomplete="email">
+                <span class="form-error" id="email-error" aria-live="polite"></span>
+              </div>
+            </div>
+
+            <!-- Subject Field -->
+            <div class="form-group" id="group-subject">
+              <label for="contact-subject" class="form-label">Subject <span class="required-star">*</span></label>
+              <input type="text" id="contact-subject" name="subject" class="form-input" placeholder="e.g. Luxury Web Development / Portfolio Inquiry" required autocomplete="off">
+              <span class="form-error" id="subject-error" aria-live="polite"></span>
+            </div>
+
+            <!-- Message Field -->
+            <div class="form-group" id="group-message">
+              <label for="contact-message" class="form-label">Message <span class="required-star">*</span></label>
+              <textarea id="contact-message" name="message" class="form-textarea" rows="5" placeholder="Detail your project timeline, requirements, and creative vision..." required autocomplete="off"></textarea>
+              <span class="form-error" id="message-error" aria-live="polite"></span>
+            </div>
+
+            <!-- Submit Button with Shimmer & Glow -->
+            <button type="submit" class="btn btn--champagne btn-shimmer contact-submit-btn" id="contact-submit-btn">
+              <span class="submit-btn-content"><i class="fa-regular fa-paper-plane"></i> Send Message</span>
+            </button>
+
+            <!-- Transparent Feedback / Fallback Banner -->
+            <div class="form-feedback-card" id="form-feedback-card" role="status" aria-live="polite" style="display: none;"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       07 // FOOTER & SIGNATURE BRANDING
+       ============================================================ -->
+  <footer class="site-footer" id="site-footer">
+    <div class="footer-top-border"></div>
+    <div class="container footer-container">
+      <div class="footer-top">
+        <!-- Column 1: Signature Brand & Tagline -->
+        <div class="footer-brand-col">
+          <a href="#hero" class="brand-monogram">
+            <div class="monogram-badge">U</div>
+            <div class="brand-text">UMER<span> SURTI</span></div>
+          </a>
+          <p class="footer-tagline">
+            Building Digital Experiences with Creativity and Precision.
+          </p>
+          <div class="footer-meta-pill">
+            <span class="footer-indicator-dot"></span>
+            <span>Bespoke Digital Craftsmanship &amp; Creative Web Architecture</span>
+          </div>
+        </div>
+
+        <!-- Column 2: Navigation Links -->
+        <div class="footer-nav-col">
+          <span class="footer-col-title">Navigation</span>
+          <ul class="footer-nav">
+            <li><a href="#hero" class="footer-nav-link">Home</a></li>
+            <li><a href="#about" class="footer-nav-link">About</a></li>
+            <li><a href="#skills" class="footer-nav-link">Skills</a></li>
+            <li><a href="#projects" class="footer-nav-link">Projects</a></li>
+            <li><a href="#education" class="footer-nav-link">Education</a></li>
+            <li><a href="#contact" class="footer-nav-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Verified Connect & Social Channels -->
+        <div class="footer-social-col">
+          <span class="footer-col-title">Connect</span>
+          <div class="footer-socials-list">
+            <!-- Authentic GitHub Profile from Project Remote -->
+            <a href="https://github.com/umersurti17-svg" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="GitHub: umersurti17-svg (Verified)">
+              <i class="fa-brands fa-github"></i>
+              <span>GitHub</span>
+            </a>
+            <!-- Editable LinkedIn Placeholder -->
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="LinkedIn Profile (Editable Link)">
+              <i class="fa-brands fa-linkedin-in"></i>
+              <span>LinkedIn</span>
+            </a>
+            <!-- Editable Behance Placeholder -->
+            <a href="https://behance.net" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="Behance Portfolio (Editable Link)">
+              <i class="fa-brands fa-behance"></i>
+              <span>Behance</span>
+            </a>
+            <!-- Editable Email Placeholder -->
+            <a href="mailto:umer.surti@example.com" class="footer-social-link" title="Direct Email (Editable Placeholder)">
+              <i class="fa-regular fa-envelope"></i>
+              <span>Direct Email</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <div class="footer-copy">
+          &copy; <span id="current-year"></span> Umer Surti. All Rights Reserved. Engineered with Passion.
+        </div>
+        <button type="button" class="back-to-top" id="back-to-top" aria-label="Return to top of page">
+          <span>Return to Top</span>
+          <i class="fa-solid fa-arrow-up"></i>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       CASE STUDY INSPECTION MODAL
+       ============================================================ -->
+  <div class="modal-overlay" id="case-study-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-container">
+      <button type="button" class="modal-close-btn" id="modal-close-btn" aria-label="Close Case Study Details">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="modal-media">
+        <img id="modal-img" src="assets/images/project1.jpg" alt="Case Study Inspection Image">
+      </div>
+      <div class="modal-body">
+        <span class="modal-category" id="modal-cat">Category</span>
+        <h3 class="modal-title" id="modal-title">Project Title</h3>
+        <p class="modal-desc" id="modal-desc">Detailed project description will be presented here.</p>
+        <div class="modal-meta-box">
+          <strong>Technologies & Architecture:</strong>
+          <span id="modal-tech" style="font-size: var(--fs-sm); color: var(--clr-text-muted);">React, GSAP, WebGL</span>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.85rem; margin-top: 0.85rem;">
+          <a href="#contact" onclick="closeCaseStudy();" class="btn btn--champagne btn--sm btn-shimmer">
+            <i class="fa-solid fa-paper-plane"></i> Discuss Commission
+          </a>
+          <a href="https://github.com/umersurti17-svg" id="modal-code-link" target="_blank" rel="noopener noreferrer" class="btn btn--ghost btn--sm" title="View Code on GitHub (Replace with specific repository URL)">
+            <i class="fa-brands fa-github"></i> View Code
+          </a>
+          <button type="button" onclick="closeCaseStudy();" class="btn btn--ghost btn--sm">
+            Close Viewer
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       SCRIPTS: THREE.JS, GSAP, LENIS, CUSTOM ENGINES
+       ============================================================ -->
+  <!-- 1. GSAP 3 & ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <!-- 2. Lenis Smooth Scroll -->
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+
+  <!-- 3. Three.js r128 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- 4. Custom Application Engines -->
+  <script src="js/three-particles.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
