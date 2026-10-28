@@ -22,19 +22,14 @@
       const heroTl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
       heroTl
-        .from('#site-header', {
-          y: -40,
-          opacity: 0,
-          duration: 0.9,
-          delay: 0.15
-        })
         // Profile Image on Left Slides in from the Left
         .from('.hero-enter-left', {
           x: -65,
           opacity: 0,
           duration: 1.2,
-          ease: 'power3.out'
-        }, '-=0.6')
+          ease: 'power3.out',
+          delay: 0.15
+        })
         // Floating badge on profile pops in with gentle bounce
         .from('.hero-floating-badge', {
           scale: 0.8,

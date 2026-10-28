@@ -48,39 +48,59 @@
     const header = document.getElementById('site-header');
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
+    const scrollIndicator = document.getElementById('hero-scroll-indicator');
 
-    window.addEventListener('scroll', () => {
-      const scrollY = window.scrollY;
+    function updateNavOnScroll(scrollY) {
+      const pos = typeof scrollY === 'number' ? scrollY : window.scrollY;
 
-      // Scrolled styling
+      // Scrolled styling with hysteresis to prevent edge-case flickering
       if (header) {
-        header.classList.toggle('scrolled', scrollY > 60);
+        if (pos > 50) {
+          header.classList.add('scrolled');
+        } else if (pos < 20) {
+          header.classList.remove('scrolled');
+        }
       }
 
       // Hero scroll indicator fade out on scroll
-      const scrollIndicator = document.getElementById('hero-scroll-indicator');
       if (scrollIndicator) {
-        scrollIndicator.style.opacity = scrollY > 80 ? '0' : '0.8';
-        scrollIndicator.style.pointerEvents = scrollY > 80 ? 'none' : 'auto';
+        scrollIndicator.style.opacity = pos > 80 ? '0' : '0.8';
+        scrollIndicator.style.pointerEvents = pos > 80 ? 'none' : 'auto';
       }
 
       // Active Section Spy
       let currentSectionId = '';
       sections.forEach((sec) => {
-        const top = sec.offsetTop - 120;
+        const top = sec.offsetTop - 140;
         const height = sec.offsetHeight;
-        if (scrollY >= top && scrollY < top + height) {
+        if (pos >= top && pos < top + height) {
           currentSectionId = sec.getAttribute('id');
         }
       });
 
-      navLinks.forEach((link) => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${currentSectionId}`) {
-          link.classList.add('active');
-        }
+      if (currentSectionId) {
+        navLinks.forEach((link) => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${currentSectionId}`) {
+            link.classList.add('active');
+          }
+        });
+      }
+    }
+
+    // Connect scroll handler to Lenis if active, and native window scroll
+    if (lenisInstance) {
+      lenisInstance.on('scroll', (e) => {
+        updateNavOnScroll(e && typeof e.scroll === 'number' ? e.scroll : window.scrollY);
       });
+    }
+
+    window.addEventListener('scroll', () => {
+      updateNavOnScroll(window.scrollY);
     }, { passive: true });
+
+    // Initial check on page load / restore scroll position
+    updateNavOnScroll(window.scrollY);
 
     // --- 3. MOBILE MENU DRAWER & BACKDROP ---
     const mobileToggle = document.getElementById('mobile-toggle');
