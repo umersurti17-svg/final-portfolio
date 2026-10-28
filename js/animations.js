@@ -28,9 +28,9 @@
           duration: 0.9,
           delay: 0.15
         })
-        // Profile Image Slides in from the Right
-        .from('.hero-enter-right', {
-          x: 75,
+        // Profile Image on Left Slides in from the Left
+        .from('.hero-enter-left', {
+          x: -65,
           opacity: 0,
           duration: 1.2,
           ease: 'power3.out'
@@ -43,25 +43,30 @@
           duration: 0.85,
           ease: 'back.out(1.6)'
         }, '-=0.6')
-        // Text Column Elements Slide in from the Left
-        .from('.hero-enter-left .vip-status-pill', {
-          x: -45,
+        // Text Column Elements on Right Slide in from the Right
+        .from('.hero-enter-right .vip-status-pill', {
+          x: 45,
           opacity: 0,
           duration: 0.75
         }, '-=1.2')
+        .from('.hero-enter-right .hero-role-badge', {
+          x: 35,
+          opacity: 0,
+          duration: 0.75
+        }, '-=0.9')
         .from('.hero-title span', {
-          x: -65,
+          x: 60,
           opacity: 0,
           duration: 0.95,
           stagger: 0.15
         }, '-=0.8')
         .from('.hero-tagline', {
-          x: -40,
+          x: 40,
           opacity: 0,
           duration: 0.8
         }, '-=0.6')
         .from('.hero-cta-group .btn', {
-          x: -30,
+          x: 30,
           opacity: 0,
           scale: 0.92,
           stagger: 0.14,
@@ -405,6 +410,48 @@
           duration: 0.95,
           ease: 'power3.out'
         });
+      });
+    }
+
+    // --- 7.5. PROJECT DOCUMENTATION SCROLL REVEAL ---
+    const docsSection = document.getElementById('docs');
+    if (docsSection && typeof ScrollTrigger !== 'undefined' && !prefersReducedMotion) {
+      gsap.from('.docs-header .section-tag, .docs-header .section-title, .docs-header .section-sub', {
+        scrollTrigger: {
+          trigger: '.docs-header',
+          start: 'top 85%',
+          once: true
+        },
+        y: 35,
+        opacity: 0,
+        stagger: 0.14,
+        duration: 0.9,
+        ease: 'power3.out'
+      });
+
+      gsap.from('.docs-card', {
+        scrollTrigger: {
+          trigger: '.docs-card',
+          start: 'top 82%',
+          once: true
+        },
+        y: 40,
+        opacity: 0,
+        duration: 1.05,
+        ease: 'power3.out'
+      });
+
+      gsap.from('.docs-tech-item', {
+        scrollTrigger: {
+          trigger: '.docs-tech-grid',
+          start: 'top 85%',
+          once: true
+        },
+        y: 20,
+        opacity: 0,
+        stagger: 0.08,
+        duration: 0.7,
+        ease: 'power2.out'
       });
     }
 

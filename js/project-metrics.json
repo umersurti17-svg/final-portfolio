@@ -1,0 +1,384 @@
+{
+  "git": {
+    "repository": "https://github.com/umersurti17-svg/final-portfolio.git",
+    "branch": "main",
+    "latestCommit": "48f943fdba38cfb67883c31c9a3e29dcf3e3f499",
+    "shortCommit": "48f943f",
+    "commitMessage": "Upgrade Umer Surti VIP portfolio",
+    "status": "Clean / Up to date with origin/main"
+  },
+  "deployment": {
+    "githubPages": {
+      "status": "Supported",
+      "config": ".nojekyll"
+    },
+    "vercel": {
+      "status": "Supported",
+      "config": "vercel.json"
+    },
+    "netlify": {
+      "status": "Supported",
+      "config": "netlify.toml"
+    }
+  },
+  "totals": {
+    "sourceFiles": 21,
+    "imageFiles": 8,
+    "docFiles": 1,
+    "allFiles": 30,
+    "sourceBytes": 369474,
+    "imageBytes": 5440691,
+    "docBytes": 40490,
+    "allBytes": 5850655,
+    "lines": 11348,
+    "codeLines": 9413,
+    "commentLines": 637,
+    "blankLines": 1298
+  },
+  "languages": {
+    "HTML": {
+      "lines": 2695,
+      "codeLines": 2206,
+      "commentLines": 241,
+      "blankLines": 248,
+      "bytes": 138607,
+      "files": 3
+    },
+    "CSS": {
+      "lines": 4959,
+      "codeLines": 4258,
+      "commentLines": 103,
+      "blankLines": 598,
+      "bytes": 102857,
+      "files": 5
+    },
+    "JavaScript": {
+      "lines": 3401,
+      "codeLines": 2774,
+      "commentLines": 228,
+      "blankLines": 399,
+      "bytes": 121366,
+      "files": 7
+    },
+    "Config": {
+      "lines": 293,
+      "codeLines": 175,
+      "commentLines": 65,
+      "blankLines": 53,
+      "bytes": 6644,
+      "files": 6
+    }
+  },
+  "files": [
+    {
+      "path": "index.html",
+      "name": "index.html",
+      "lang": "HTML",
+      "category": "Markup",
+      "description": "Main VIP Developer Portfolio Homepage (7 sections + modal + mobile drawer)",
+      "sizeBytes": 66498,
+      "totalLines": 1292,
+      "codeLines": 1020,
+      "commentLines": 154,
+      "blankLines": 118
+    },
+    {
+      "path": "dashboard.html",
+      "name": "dashboard.html",
+      "lang": "HTML",
+      "category": "Markup",
+      "description": "Developer Architecture & Technical Showcase Dashboard",
+      "sizeBytes": 44650,
+      "totalLines": 840,
+      "codeLines": 735,
+      "commentLines": 43,
+      "blankLines": 62
+    },
+    {
+      "path": "admin.html",
+      "name": "admin.html",
+      "lang": "HTML",
+      "category": "Markup",
+      "description": "Administrative Project Management Console with Supabase Authentication",
+      "sizeBytes": 27459,
+      "totalLines": 563,
+      "codeLines": 451,
+      "commentLines": 44,
+      "blankLines": 68
+    },
+    {
+      "path": "css/luxury-tokens.css",
+      "name": "luxury-tokens.css",
+      "lang": "CSS",
+      "category": "Design System",
+      "description": "Luxury dark color tokens, gradients, glass tokens, fluid typography",
+      "sizeBytes": 3837,
+      "totalLines": 97,
+      "codeLines": 71,
+      "commentLines": 12,
+      "blankLines": 14
+    },
+    {
+      "path": "css/animations.css",
+      "name": "animations.css",
+      "lang": "CSS",
+      "category": "Animations",
+      "description": "Keyframes, metallic shimmers, reduced-motion overrides",
+      "sizeBytes": 4686,
+      "totalLines": 245,
+      "codeLines": 206,
+      "commentLines": 10,
+      "blankLines": 29
+    },
+    {
+      "path": "css/style.css",
+      "name": "style.css",
+      "lang": "CSS",
+      "category": "Styles",
+      "description": "Core portfolio styling, 3D card tilt, responsive grid, luxury footer",
+      "sizeBytes": 58014,
+      "totalLines": 2809,
+      "codeLines": 2435,
+      "commentLines": 41,
+      "blankLines": 333
+    },
+    {
+      "path": "css/dashboard.css",
+      "name": "dashboard.css",
+      "lang": "CSS",
+      "category": "Styles",
+      "description": "Dedicated styles for developer showcase dashboard & sidebar",
+      "sizeBytes": 17505,
+      "totalLines": 842,
+      "codeLines": 717,
+      "commentLines": 20,
+      "blankLines": 105
+    },
+    {
+      "path": "css/admin.css",
+      "name": "admin.css",
+      "lang": "CSS",
+      "category": "Styles",
+      "description": "Dedicated luxury styling for admin authentication, stats, and project modals",
+      "sizeBytes": 18815,
+      "totalLines": 966,
+      "codeLines": 829,
+      "commentLines": 20,
+      "blankLines": 117
+    },
+    {
+      "path": "js/three-particles.js",
+      "name": "three-particles.js",
+      "lang": "JavaScript",
+      "category": "3D Graphics",
+      "description": "Three.js particle galaxy, drift-free light trails, tab visibility",
+      "sizeBytes": 8822,
+      "totalLines": 261,
+      "codeLines": 194,
+      "commentLines": 19,
+      "blankLines": 48
+    },
+    {
+      "path": "js/animations.js",
+      "name": "animations.js",
+      "lang": "JavaScript",
+      "category": "Motion",
+      "description": "GSAP 3 & ScrollTrigger timeline orchestration and defensive fallbacks",
+      "sizeBytes": 14897,
+      "totalLines": 533,
+      "codeLines": 454,
+      "commentLines": 43,
+      "blankLines": 36
+    },
+    {
+      "path": "js/app.js",
+      "name": "app.js",
+      "lang": "JavaScript",
+      "category": "Core App",
+      "description": "Lenis smooth scroll, mobile drawer state, contact validation & mailto fallback",
+      "sizeBytes": 15865,
+      "totalLines": 406,
+      "codeLines": 322,
+      "commentLines": 29,
+      "blankLines": 55
+    },
+    {
+      "path": "js/dashboard.js",
+      "name": "dashboard.js",
+      "lang": "JavaScript",
+      "category": "Dashboard Logic",
+      "description": "Interactive sidebar, metrics counters, chart rendering, file explorer",
+      "sizeBytes": 23993,
+      "totalLines": 717,
+      "codeLines": 631,
+      "commentLines": 28,
+      "blankLines": 58
+    },
+    {
+      "path": "js/supabase-config.js",
+      "name": "supabase-config.js",
+      "lang": "JavaScript",
+      "category": "Backend/DB",
+      "description": "Supabase client initialization, RLS configuration, and auth service",
+      "sizeBytes": 10702,
+      "totalLines": 351,
+      "codeLines": 244,
+      "commentLines": 50,
+      "blankLines": 57
+    },
+    {
+      "path": "js/portfolio-projects.js",
+      "name": "portfolio-projects.js",
+      "lang": "JavaScript",
+      "category": "Data Sync",
+      "description": "Dynamic portfolio project card renderer with graceful static fallback",
+      "sizeBytes": 7273,
+      "totalLines": 192,
+      "codeLines": 154,
+      "commentLines": 12,
+      "blankLines": 26
+    },
+    {
+      "path": "js/admin.js",
+      "name": "admin.js",
+      "lang": "JavaScript",
+      "category": "Admin Logic",
+      "description": "Admin console controller, session verification, and database CRUD actions",
+      "sizeBytes": 39814,
+      "totalLines": 941,
+      "codeLines": 775,
+      "commentLines": 47,
+      "blankLines": 119
+    },
+    {
+      "path": "package.json",
+      "name": "package.json",
+      "lang": "JSON",
+      "category": "Configuration",
+      "description": "Project metadata, npm validation scripts, and keywords",
+      "sizeBytes": 1040,
+      "totalLines": 29,
+      "codeLines": 28,
+      "commentLines": 0,
+      "blankLines": 1
+    },
+    {
+      "path": "vercel.json",
+      "name": "vercel.json",
+      "lang": "JSON",
+      "category": "Deployment",
+      "description": "Vercel edge caching rules, clean URLs, and HTTP security headers",
+      "sizeBytes": 1111,
+      "totalLines": 56,
+      "codeLines": 55,
+      "commentLines": 0,
+      "blankLines": 1
+    },
+    {
+      "path": "netlify.toml",
+      "name": "netlify.toml",
+      "lang": "TOML",
+      "category": "Deployment",
+      "description": "Netlify deployment configuration, publish directory, and security headers",
+      "sizeBytes": 596,
+      "totalLines": 26,
+      "codeLines": 21,
+      "commentLines": 0,
+      "blankLines": 5
+    },
+    {
+      "path": ".env.example",
+      "name": ".env.example",
+      "lang": "Config",
+      "category": "Environment",
+      "description": "Environment variables template with documented placeholder keys",
+      "sizeBytes": 1498,
+      "totalLines": 34,
+      "codeLines": 3,
+      "commentLines": 24,
+      "blankLines": 7
+    },
+    {
+      "path": ".gitignore",
+      "name": ".gitignore",
+      "lang": "Git",
+      "category": "Git",
+      "description": "Git ignore rules for secrets, hosting builds, IDEs, and OS artifacts",
+      "sizeBytes": 2399,
+      "totalLines": 147,
+      "codeLines": 68,
+      "commentLines": 41,
+      "blankLines": 38
+    },
+    {
+      "path": ".nojekyll",
+      "name": ".nojekyll",
+      "lang": "Config",
+      "category": "Deployment",
+      "description": "Bypasses Jekyll parser on GitHub Pages for direct static asset delivery",
+      "sizeBytes": 0,
+      "totalLines": 1,
+      "codeLines": 0,
+      "commentLines": 0,
+      "blankLines": 1
+    }
+  ],
+  "images": [
+    {
+      "path": "image/c9612794-cc7d-4caf-9bc0-77df03f70ec7.png",
+      "name": "c9612794-cc7d-4caf-9bc0-77df03f70ec7.png",
+      "description": "VIP Hero portrait artwork with golden halo for Umer Surti",
+      "sizeBytes": 1816387
+    },
+    {
+      "path": "image/864782121_1816361962850107_4900486461072689404_n.jpg",
+      "name": "864782121_1816361962850107_4900486461072689404_n.jpg",
+      "description": "Alternative portrait photo of Umer Surti",
+      "sizeBytes": 92677
+    },
+    {
+      "path": "assets/images/profile.jpg",
+      "name": "profile.jpg",
+      "description": "Portfolio portrait asset",
+      "sizeBytes": 553989
+    },
+    {
+      "path": "assets/images/project1.jpg",
+      "name": "project1.jpg",
+      "description": "Velasco Couture Haute Horlogerie & Fashion Platform screenshot",
+      "sizeBytes": 570981
+    },
+    {
+      "path": "assets/images/project2.jpg",
+      "name": "project2.jpg",
+      "description": "Aether Banking Wealth Management & Fintech UI screenshot",
+      "sizeBytes": 683044
+    },
+    {
+      "path": "assets/images/project3.jpg",
+      "name": "project3.jpg",
+      "description": "Vertex Analytics Spatial Intelligence & Data Observatory screenshot",
+      "sizeBytes": 524792
+    },
+    {
+      "path": "assets/images/gallery1.jpg",
+      "name": "gallery1.jpg",
+      "description": "Visual concept artwork asset",
+      "sizeBytes": 555122
+    },
+    {
+      "path": "assets/images/gallery2.jpg",
+      "name": "gallery2.jpg",
+      "description": "Visual concept artwork asset",
+      "sizeBytes": 643699
+    }
+  ],
+  "documents": [
+    {
+      "path": "pdf/Umer_Surti_VIP_Portfolio_Documentation_Roman_Urdu.pdf",
+      "name": "Umer_Surti_VIP_Portfolio_Documentation_Roman_Urdu.pdf",
+      "description": "Comprehensive Architecture Specification & Engineering Blueprint PDF (Roman Urdu)",
+      "sizeBytes": 40490
+    }
+  ]
+}

@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Account Portal — Umer Surti VIP Portfolio</title>
+  <meta name="description" content="Personal user dashboard and account management portal for Umer Surti VIP Portfolio.">
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="assets/images/profile.jpg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Design System & Tokens -->
+  <link rel="stylesheet" href="css/luxury-tokens.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+
+  <style>
+    .user-portal-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    @media (min-width: 768px) {
+      .user-portal-grid {
+        grid-template-columns: 340px 1fr;
+      }
+    }
+    .user-profile-card {
+      background: var(--clr-mocha-card);
+      border: 1px solid var(--clr-bronze-border);
+      border-radius: var(--radius-lg);
+      padding: 2.25rem 1.75rem;
+      text-align: center;
+      position: relative;
+      box-shadow: var(--shadow-vip-glow);
+    }
+    .user-avatar-large {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--clr-bronze), var(--clr-champagne));
+      color: var(--clr-espresso);
+      font-family: var(--font-display);
+      font-size: 2.25rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.25rem;
+      box-shadow: 0 4px 20px rgba(152, 112, 79, 0.4);
+    }
+    .user-name-title {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      color: var(--clr-champagne);
+      margin-bottom: 0.25rem;
+    }
+    .user-email-subtitle {
+      font-size: var(--fs-xs);
+      color: var(--clr-text-muted);
+      word-break: break-all;
+      margin-bottom: 1.25rem;
+    }
+    .role-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.35rem 0.85rem;
+      border-radius: var(--radius-pill);
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .role-badge--member {
+      background: rgba(152, 112, 79, 0.2);
+      border: 1px solid var(--clr-bronze);
+      color: var(--clr-champagne);
+    }
+    .role-badge--admin {
+      background: rgba(245, 158, 11, 0.2);
+      border: 1px solid #f59e0b;
+      color: #fbbf24;
+    }
+    .portal-content-card {
+      background: var(--clr-mocha-card);
+      border: 1px solid var(--clr-bronze-border);
+      border-radius: var(--radius-lg);
+      padding: 2.25rem;
+      box-shadow: var(--shadow-vip-glow);
+    }
+    .portal-section-title {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      color: var(--clr-champagne);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .portal-meta-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .portal-meta-item {
+      background: rgba(23, 19, 16, 0.6);
+      border: 1px solid var(--clr-bronze-border);
+      border-radius: var(--radius-sm);
+      padding: 1rem;
+    }
+    .portal-meta-label {
+      font-size: 0.68rem;
+      font-family: var(--font-mono);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--clr-bronze-light);
+      margin-bottom: 0.35rem;
+    }
+    .portal-meta-value {
+      font-size: var(--fs-sm);
+      color: var(--clr-text-main);
+      font-weight: 600;
+      word-break: break-all;
+    }
+    .portal-actions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .portal-action-card {
+      background: rgba(23, 19, 16, 0.7);
+      border: 1px solid var(--clr-bronze-border);
+      border-radius: var(--radius-sm);
+      padding: 1.25rem;
+      text-decoration: none;
+      color: var(--clr-text-main);
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      transition: all var(--tr-fast);
+    }
+    .portal-action-card:hover {
+      border-color: var(--clr-bronze-light);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+    }
+    .portal-action-icon {
+      font-size: 1.4rem;
+      color: var(--clr-champagne);
+    }
+    .portal-action-title {
+      font-weight: 600;
+      font-size: var(--fs-sm);
+      color: var(--clr-champagne);
+    }
+    .portal-action-desc {
+      font-size: var(--fs-xs);
+      color: var(--clr-text-muted);
+      line-height: 1.4;
+    }
+    #loading-state {
+      min-height: 60vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+  </style>
+</head>
+<body class="admin-body">
+
+  <!-- Ambient Luxury Background Lighting -->
+  <div class="admin-bg-glow admin-bg-glow--top" aria-hidden="true"></div>
+  <div class="admin-bg-glow admin-bg-glow--bottom" aria-hidden="true"></div>
+
+  <!-- Header Navigation -->
+  <header class="admin-header">
+    <div class="admin-nav-container">
+      <a href="index.html" class="admin-brand" title="Return to Public Portfolio">
+        <div class="brand-monogram">U</div>
+        <div class="admin-brand-titles">
+          <div class="admin-brand-title">UMER<span> SURTI</span></div>
+          <div class="admin-badge-pill">
+            <i class="fa-solid fa-user-check"></i>
+            <span>User Portal</span>
+          </div>
+        </div>
+      </a>
+
+      <div class="admin-header-actions">
+        <a href="index.html" class="btn btn--ghost btn--sm">
+          <i class="fa-solid fa-arrow-left"></i>
+          <span>Portfolio</span>
+        </a>
+        <a href="dashboard.html" class="btn btn--ghost btn--sm">
+          <i class="fa-solid fa-layer-group"></i>
+          <span>Architecture</span>
+        </a>
+        <button type="button" class="btn btn--ghost btn--sm" id="btn-user-logout">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+          <span>Log Out</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main class="admin-main">
+
+    <!-- Loading State -->
+    <div id="loading-state">
+      <i class="fa-solid fa-spinner spinner-icon" style="font-size: 2.25rem; color: var(--clr-champagne); margin-bottom: 1rem;"></i>
+      <h2 style="font-family: var(--font-display); color: var(--clr-champagne); font-size: 1.25rem;">Authenticating Session...</h2>
+      <p style="color: var(--clr-text-muted); font-size: var(--fs-sm);">Verifying Supabase credentials and security clearance...</p>
+    </div>
+
+    <!-- Admin Restriction Notice Banner (if redirected from /admin.html) -->
+    <div id="admin-notice-banner" class="alert-banner alert-banner--warning" style="display: none; max-width: 960px; margin: 0 auto 1.5rem;" role="alert">
+      <i class="fa-solid fa-circle-info"></i>
+      <div>
+        <strong>Admin Console Restricted:</strong> The Administrative Project Console is reserved for accounts registered in <code>portfolio_admins</code>. You have been directed to your Member Portal.
+      </div>
+    </div>
+
+    <!-- Active User Portal View -->
+    <div class="user-portal-grid" id="portal-content" style="display: none;">
+
+      <!-- Left Column: User Profile Card -->
+      <aside class="user-profile-card">
+        <div class="user-avatar-large" id="profile-avatar">U</div>
+        <h2 class="user-name-title" id="profile-name">User Account</h2>
+        <div class="user-email-subtitle" id="profile-email">user@domain.com</div>
+
+        <div style="margin-bottom: 1.5rem;">
+          <span class="role-badge role-badge--member" id="profile-role-badge">
+            <i class="fa-solid fa-shield-halved"></i>
+            <span id="profile-role-text">Registered Member</span>
+          </span>
+        </div>
+
+        <div style="border-top: 1px solid var(--clr-bronze-border); padding-top: 1.25rem; text-align: left;">
+          <div style="font-size: 0.72rem; color: var(--clr-text-muted); line-height: 1.6;">
+            <p><strong>Account ID:</strong></p>
+            <p id="profile-uuid" style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--clr-champagne); word-break: break-all; margin-bottom: 0.75rem;"></p>
+            <p><strong>Authentication:</strong></p>
+            <p style="color: #4ade80;"><i class="fa-solid fa-circle-check"></i> Supabase Auth (Active)</p>
+          </div>
+        </div>
+
+        <button type="button" class="btn btn--ghost btn--sm" id="btn-sidebar-logout" style="width: 100%; margin-top: 1.5rem;">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+          <span>Sign Out</span>
+        </button>
+      </aside>
+
+      <!-- Right Column: Welcome and Dashboard Services -->
+      <section class="portal-content-card">
+        <div class="portal-section-title">
+          <i class="fa-solid fa-sparkles" style="color: var(--clr-champagne);"></i>
+          <span>Welcome to Umer Surti VIP Portal</span>
+        </div>
+        <p style="font-size: var(--fs-sm); color: var(--clr-text-muted); line-height: 1.6;">
+          Your account is verified and authenticated via Supabase Auth. You have standard member clearance to explore the technical architecture, review documentation, and view showcase deliverables.
+        </p>
+
+        <!-- Admin Access Callout (Only for Authorized Admins) -->
+        <div id="admin-access-callout" style="display: none; margin-top: 1.25rem; padding: 1.15rem; background: rgba(245, 158, 11, 0.12); border: 1px solid rgba(245, 158, 11, 0.4); border-radius: var(--radius-sm);">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+            <div>
+              <div style="color: #fbbf24; font-weight: 700; font-size: var(--fs-sm); margin-bottom: 0.2rem;">
+                <i class="fa-solid fa-crown" style="margin-right: 0.4rem;"></i>
+                Portfolio Administrator Clearance Detected
+              </div>
+              <div style="font-size: var(--fs-xs); color: var(--clr-text-muted);">
+                Your account is whitelisted in <code>public.portfolio_admins</code> with full project CRUD permissions.
+              </div>
+            </div>
+            <a href="admin.html" class="btn btn--champagne btn--sm btn-shimmer">
+              <i class="fa-solid fa-screwdriver-wrench"></i>
+              <span>Launch Admin Console</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Meta Details -->
+        <div class="portal-meta-grid">
+          <div class="portal-meta-item">
+            <div class="portal-meta-label">Account Clearance</div>
+            <div class="portal-meta-value" id="meta-clearance">Standard Member</div>
+          </div>
+          <div class="portal-meta-item">
+            <div class="portal-meta-label">Security Protocol</div>
+            <div class="portal-meta-value">Supabase JWT + RLS</div>
+          </div>
+          <div class="portal-meta-item">
+            <div class="portal-meta-label">Last Sign In</div>
+            <div class="portal-meta-value" id="meta-last-sign-in">Just now</div>
+          </div>
+        </div>
+
+        <!-- Portal Navigation Cards -->
+        <h3 style="font-family: var(--font-display); font-size: 1.05rem; color: var(--clr-champagne); margin-top: 2rem; margin-bottom: 0.75rem;">
+          Quick Resources & Actions
+        </h3>
+        <div class="portal-actions-grid">
+          <a href="index.html" class="portal-action-card">
+            <i class="fa-solid fa-briefcase portal-action-icon"></i>
+            <span class="portal-action-title">Portfolio Projects</span>
+            <span class="portal-action-desc">Explore curated haute horlogerie, fintech, and spatial SaaS works.</span>
+          </a>
+
+          <a href="dashboard.html" class="portal-action-card">
+            <i class="fa-solid fa-layer-group portal-action-icon"></i>
+            <span class="portal-action-title">Developer Showcase</span>
+            <span class="portal-action-desc">Inspect frontend architecture, line counts, and Three.js tech stack.</span>
+          </a>
+
+          <a href="./pdf/Umer_Surti_VIP_Portfolio_Documentation_Roman_Urdu.pdf" target="_blank" rel="noopener noreferrer" class="portal-action-card">
+            <i class="fa-solid fa-file-pdf portal-action-icon"></i>
+            <span class="portal-action-title">View Documentation</span>
+            <span class="portal-action-desc">Access the comprehensive project specification documentation.</span>
+          </a>
+        </div>
+
+      </section>
+    </div>
+
+  </main>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Supabase Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+  <script>
+    if (typeof supabase === 'undefined') {
+      document.write('<script src="js/vendor/supabase.min.js"><\/script>');
+    }
+  </script>
+  <script src="js/supabase-config.js"></script>
+  <script>
+    (function () {
+      'use strict';
+
+      const loadingState = document.getElementById('loading-state');
+      const portalContent = document.getElementById('portal-content');
+      const profileAvatar = document.getElementById('profile-avatar');
+      const profileName = document.getElementById('profile-name');
+      const profileEmail = document.getElementById('profile-email');
+      const profileUuid = document.getElementById('profile-uuid');
+      const profileRoleBadge = document.getElementById('profile-role-badge');
+      const profileRoleText = document.getElementById('profile-role-text');
+      const metaClearance = document.getElementById('meta-clearance');
+      const metaLastSignIn = document.getElementById('meta-last-sign-in');
+      const adminAccessCallout = document.getElementById('admin-access-callout');
+      const btnUserLogout = document.getElementById('btn-user-logout');
+      const btnSidebarLogout = document.getElementById('btn-sidebar-logout');
+
+      async function initPortal() {
+        if (!window.PortfolioService) {
+          setTimeout(initPortal, 100);
+          return;
+        }
+
+        try {
+          const session = await window.PortfolioService.getSession();
+          if (!session || !session.user) {
+            // Not authenticated: redirect to login
+            window.location.href = 'admin.html';
+            return;
+          }
+
+          const user = session.user;
+          const fullName = (user.user_metadata && user.user_metadata.full_name) || user.email.split('@')[0];
+
+          profileAvatar.textContent = fullName.charAt(0).toUpperCase();
+          profileName.textContent = fullName;
+          profileEmail.textContent = user.email;
+          profileUuid.textContent = user.id;
+
+          const lastSignIn = user.last_sign_in_at ? new Date(user.last_sign_in_at).toLocaleDateString() : 'Active now';
+          metaLastSignIn.textContent = lastSignIn;
+
+          if (session.isAdmin) {
+            profileRoleBadge.className = 'role-badge role-badge--admin';
+            profileRoleText.textContent = 'Portfolio Administrator';
+            metaClearance.textContent = 'Super Administrator';
+            adminAccessCallout.style.display = 'block';
+          } else {
+            profileRoleBadge.className = 'role-badge role-badge--member';
+            profileRoleText.textContent = 'Registered Member';
+            metaClearance.textContent = 'Standard Member';
+            adminAccessCallout.style.display = 'none';
+
+            // Show notice if redirected because user attempted to access the admin console
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('notice') === 'admin_only') {
+              const banner = document.getElementById('admin-notice-banner');
+              if (banner) banner.style.display = 'flex';
+            }
+          }
+
+          loadingState.style.display = 'none';
+          portalContent.style.display = 'grid';
+
+        } catch (err) {
+          console.error('[User Portal] Auth verification failed:', err);
+          window.location.href = 'admin.html';
+        }
+      }
+
+      async function logout() {
+        try {
+          if (window.PortfolioService) {
+            await window.PortfolioService.signOut();
+          }
+          window.location.href = 'admin.html';
+        } catch (err) {
+          console.error('[User Portal] Logout error:', err);
+          window.location.href = 'admin.html';
+        }
+      }
+
+      if (btnUserLogout) btnUserLogout.addEventListener('click', logout);
+      if (btnSidebarLogout) btnSidebarLogout.addEventListener('click', logout);
+
+      window.addEventListener('DOMContentLoaded', initPortal);
+    })();
+  </script>
+</body>
+</html>

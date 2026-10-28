@@ -46,7 +46,10 @@
           <li><a href="#skills" class="nav-link">Skills</a></li>
           <li><a href="#projects" class="nav-link">Projects</a></li>
           <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#docs" class="nav-link">Docs</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li><a href="dashboard.html" class="nav-link" title="Developer & Architecture Showcase">Dashboard</a></li>
+          <li><a href="admin.html" class="nav-link" id="nav-portal-link" title="User & Admin Portal"><i class="fa-solid fa-user-lock" style="font-size: 0.7rem; margin-right: 0.25rem;"></i>Portal</a></li>
         </ul>
       </nav>
 
@@ -73,7 +76,10 @@
       <li><a href="#skills" class="mobile-nav-link">03. Skills</a></li>
       <li><a href="#projects" class="mobile-nav-link">04. Projects</a></li>
       <li><a href="#education" class="mobile-nav-link">05. Education</a></li>
-      <li><a href="#contact" class="mobile-nav-link">06. Contact</a></li>
+      <li><a href="#docs" class="mobile-nav-link">06. Documentation</a></li>
+      <li><a href="#contact" class="mobile-nav-link">07. Contact</a></li>
+      <li><a href="dashboard.html" class="mobile-nav-link">08. Dashboard</a></li>
+      <li><a href="admin.html" class="mobile-nav-link" id="mobile-portal-link">09. Portal / Sign In</a></li>
     </ul>
     <div style="margin-top: 1.5rem;">
       <a href="#contact" class="btn btn--champagne btn-shimmer" style="width: 100%;">Initiate Project</a>
@@ -93,12 +99,41 @@
 
     <div class="container hero-container">
       <div class="hero-layout">
-        <!-- Left Column: Main Visual Focus & Narrative (Enters from Left) -->
-        <div class="hero-text-col hero-enter-left">
+        <!-- Left Column: Profile Image Area (Enters from Left) -->
+        <div class="hero-visual-col hero-enter-left">
+          <div class="hero-portrait-stage">
+            <div class="hero-ambient-glow"></div>
+            <div class="hero-portrait-card tilt-card anim-float">
+              <div class="hero-card-border-glow"></div>
+              <div class="hero-card-glass-frame">
+                <div class="hero-portrait-img-wrap">
+                  <img src="image/c9612794-cc7d-4caf-9bc0-77df03f70ec7.png" alt="Portrait of Umer Surti" class="hero-portrait-img" loading="eager">
+                </div>
+              </div>
+              <!-- Floating VIP Monogram & Metric Seal -->
+              <div class="hero-floating-badge anim-float-lag">
+                <div class="badge-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                <div class="badge-text">
+                  <span class="badge-title">VIP Developer</span>
+                  <span class="badge-sub">20+ Delivered Works</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Main Visual Focus & Narrative (Enters from Right) -->
+        <div class="hero-text-col hero-enter-right">
           <!-- VIP Availability Pill -->
           <div class="vip-status-pill anim-breathe">
             <span class="status-indicator-dot"></span>
             <span>Available for Select Commissions</span>
+          </div>
+
+          <!-- Developer Designation Badge -->
+          <div class="hero-role-badge">
+            <i class="fa-solid fa-code" style="font-size: 0.75rem;"></i>
+            <span>WEB DEVELOPER</span>
           </div>
 
           <!-- Main Visual Focus -->
@@ -115,7 +150,7 @@
           <!-- Interactive Action Buttons -->
           <div class="hero-cta-group">
             <a href="#projects" class="btn btn--champagne btn-shimmer magnetic">
-              <i class="fa-solid fa-arrow-trend-up"></i> Explore My Work
+              <i class="fa-solid fa-arrow-trend-up"></i> View Portfolio
             </a>
             <a href="#contact" class="btn btn--ghost btn-shimmer magnetic">
               <i class="fa-regular fa-paper-plane"></i> Contact Me
@@ -135,29 +170,6 @@
             <div class="hero-hl-pill">
               <i class="fa-solid fa-gem"></i>
               <span>Luxury UI/UX</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right Column: Profile Image Area (Enters from Right) -->
-        <div class="hero-visual-col hero-enter-right">
-          <div class="hero-portrait-stage">
-            <div class="hero-ambient-glow"></div>
-            <div class="hero-portrait-card tilt-card anim-float">
-              <div class="hero-card-border-glow"></div>
-              <div class="hero-card-glass-frame">
-                <div class="hero-portrait-img-wrap">
-                  <img src="assets/images/profile.jpg" alt="Portrait of Umer Surti" class="hero-portrait-img" loading="eager">
-                </div>
-              </div>
-              <!-- Floating VIP Monogram & Metric Seal -->
-              <div class="hero-floating-badge anim-float-lag">
-                <div class="badge-icon"><i class="fa-solid fa-shield-halved"></i></div>
-                <div class="badge-text">
-                  <span class="badge-title">VIP Developer</span>
-                  <span class="badge-sub">20+ Delivered Works</span>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -187,7 +199,7 @@
             <div class="about-portrait-card tilt-card">
               <div class="about-card-glass-frame">
                 <div class="about-portrait-img-wrap">
-                  <img src="assets/images/profile.jpg" alt="Portrait of Umer Surti" class="about-portrait-img" loading="lazy">
+                  <img src="image/c9612794-cc7d-4caf-9bc0-77df03f70ec7.png" alt="Portrait of Umer Surti" class="about-portrait-img" loading="lazy">
                 </div>
               </div>
               <!-- Subtle decorative badge -->
@@ -844,7 +856,161 @@
   </section>
 
   <!-- ============================================================
-       06 // LET'S CONNECT (CONTACT SECTION)
+       06 // PROJECT DOCUMENTATION SECTION
+       ============================================================ -->
+  <section class="section-padding docs-section" id="docs" aria-labelledby="docs-heading">
+    <div class="container">
+      <!-- Section Header -->
+      <div class="text-center docs-header">
+        <span class="section-tag">ENGINEERING SPECIFICATIONS</span>
+        <h2 class="section-title" id="docs-heading">PROJECT <em>DOCUMENTATION</em></h2>
+        <p class="section-sub">Comprehensive Architectural Blueprint, Technical Specifications &amp; Verification Dossier</p>
+      </div>
+
+      <!-- Main Documentation Showcase Card -->
+      <div class="docs-card">
+        <!-- Top Bar: Document Status & Badges -->
+        <div class="docs-card-topbar">
+          <div class="docs-type-badge">
+            <i class="fa-solid fa-file-pdf docs-pdf-icon" aria-hidden="true"></i>
+            <span>PDF SPECIFICATION &bull; OFFICIAL DOSSIER</span>
+          </div>
+          <div class="docs-meta-pill">
+            <span class="status-indicator-dot" aria-hidden="true"></span>
+            <span>Verified Production Blueprint</span>
+          </div>
+        </div>
+
+        <!-- Middle Grid: Executive Summary & Stack Overview -->
+        <div class="docs-content-grid">
+          <!-- Left Column: Narrative & Stack Breakdown -->
+          <div class="docs-text-col">
+            <h3 class="docs-title">Bespoke Front-End Architecture &amp; Creative Engineering</h3>
+            <p class="docs-desc">
+              The <strong>Umer Surti VIP Developer Portfolio</strong> is engineered as a zero-bloat, high-performance static masterpiece. Built entirely on vanilla web foundations and hardware-accelerated motion libraries, the platform achieves a 60 FPS cinematic visual standard while remaining 100% lightweight and serverless.
+            </p>
+
+            <!-- Core Technologies Grid -->
+            <div class="docs-tech-grid">
+              <div class="docs-tech-item">
+                <div class="docs-tech-header">
+                  <span class="docs-tech-dot html" aria-hidden="true"></span>
+                  <strong>Semantic HTML5</strong>
+                </div>
+                <p>Accessible WAI-ARIA dialogs, landmark hierarchy, strict semantic layout, and rich OpenGraph/SEO metadata.</p>
+              </div>
+
+              <div class="docs-tech-item">
+                <div class="docs-tech-header">
+                  <span class="docs-tech-dot css" aria-hidden="true"></span>
+                  <strong>CSS3 Design Tokens</strong>
+                </div>
+                <p>Modular luxury design system in Espresso (#171310), Mocha (#49372B), Bronze (#98704F), and Champagne (#D8C8AD) with fluid clamp() typography and glassmorphism.</p>
+              </div>
+
+              <div class="docs-tech-item">
+                <div class="docs-tech-header">
+                  <span class="docs-tech-dot js" aria-hidden="true"></span>
+                  <strong>JavaScript (ES6+)</strong>
+                </div>
+                <p>Pure modular scripts, event delegation, focus trapping, RFC-compliant form validation, and offline fallback telemetry.</p>
+              </div>
+
+              <div class="docs-tech-item">
+                <div class="docs-tech-header">
+                  <span class="docs-tech-dot three" aria-hidden="true"></span>
+                  <strong>Three.js (r128)</strong>
+                </div>
+                <p>GPU-accelerated 3D particle galaxy with responsive canvas resizing, drift-free mouse trails, and Page Visibility API throttling.</p>
+              </div>
+
+              <div class="docs-tech-item">
+                <div class="docs-tech-header">
+                  <span class="docs-tech-dot gsap" aria-hidden="true"></span>
+                  <strong>GSAP 3 &amp; ScrollTrigger</strong>
+                </div>
+                <p>Multi-stage cinematic scroll choreographies, staggered waypoint reveals, and defensive CSS keyframe fallbacks.</p>
+              </div>
+
+              <div class="docs-tech-item">
+                <div class="docs-tech-header">
+                  <span class="docs-tech-dot lenis" aria-hidden="true"></span>
+                  <strong>Lenis Smooth Scroll</strong>
+                </div>
+                <p>Butter-smooth kinetic momentum scrolling normalized across all operating systems and synchronized with ScrollTrigger.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Document Preview Card & Direct Download Actions -->
+          <div class="docs-action-col">
+            <div class="docs-preview-frame">
+              <div class="docs-preview-header">
+                <i class="fa-solid fa-file-lines docs-frame-icon" aria-hidden="true"></i>
+                <div class="docs-frame-meta">
+                  <span class="docs-frame-name">Umer_Surti_VIP_Portfolio_Documentation_Roman_Urdu.pdf</span>
+                  <span class="docs-frame-spec">Official Architecture &amp; Implementation Dossier (Roman Urdu)</span>
+                </div>
+              </div>
+
+              <div class="docs-preview-body">
+                <div class="docs-spec-row">
+                  <span class="docs-spec-label"><i class="fa-solid fa-layer-group"></i> Architecture:</span>
+                  <span class="docs-spec-val">Static / Jamstack</span>
+                </div>
+                <div class="docs-spec-row">
+                  <span class="docs-spec-label"><i class="fa-solid fa-cloud-arrow-up"></i> Targets:</span>
+                  <span class="docs-spec-val">Vercel, Netlify, GitHub Pages</span>
+                </div>
+                <div class="docs-spec-row">
+                  <span class="docs-spec-label"><i class="fa-solid fa-universal-access"></i> A11y Standards:</span>
+                  <span class="docs-spec-val">WCAG 2.1 AA Compliant</span>
+                </div>
+                <div class="docs-spec-row">
+                  <span class="docs-spec-label"><i class="fa-solid fa-gauge-high"></i> Performance:</span>
+                  <span class="docs-spec-val">60 FPS Hardware Rendered</span>
+                </div>
+                <div class="docs-spec-row">
+                  <span class="docs-spec-label"><i class="fa-solid fa-shield-halved"></i> Security:</span>
+                  <span class="docs-spec-val">Zero Secrets Committed</span>
+                </div>
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="docs-btn-group">
+                <!-- 1. View Documentation in New Tab -->
+                <a href="./pdf/Umer_Surti_VIP_Portfolio_Documentation_Roman_Urdu.pdf" target="_blank" rel="noopener noreferrer" class="btn btn--champagne btn-shimmer docs-btn" aria-label="View Umer Surti VIP Portfolio Documentation PDF in new tab">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  <span>View Documentation</span>
+                </a>
+
+                <!-- 2. Download PDF Button -->
+                <a href="./pdf/Umer_Surti_VIP_Portfolio_Documentation_Roman_Urdu.pdf" download="Umer_Surti_VIP_Portfolio_Documentation_Roman_Urdu.pdf" class="btn btn--ghost docs-btn" aria-label="Download Umer Surti VIP Portfolio Documentation PDF">
+                  <i class="fa-solid fa-download"></i>
+                  <span>Download PDF</span>
+                </a>
+
+                <!-- Secondary Link: Interactive Developer Dashboard -->
+                <a href="dashboard.html" class="docs-dashboard-link" title="Open Interactive Developer Dashboard">
+                  <i class="fa-solid fa-chart-pie"></i>
+                  <span>Or Explore Live Interactive Telemetry Dashboard</span>
+                </a>
+              </div>
+
+              <!-- Notice on local PDF availability -->
+              <div class="docs-file-hint">
+                <i class="fa-solid fa-circle-info"></i>
+                <span>File Location: <code>./pdf/Umer_Surti_VIP_Portfolio_Documentation_Roman_Urdu.pdf</code></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       07 // LET'S CONNECT (CONTACT SECTION)
        ============================================================ -->
   <section class="section-padding contact-section" id="contact">
     <div class="container">
@@ -1012,7 +1178,10 @@
             <li><a href="#skills" class="footer-nav-link">Skills</a></li>
             <li><a href="#projects" class="footer-nav-link">Projects</a></li>
             <li><a href="#education" class="footer-nav-link">Education</a></li>
+            <li><a href="#docs" class="footer-nav-link">Documentation</a></li>
             <li><a href="#contact" class="footer-nav-link">Contact</a></li>
+            <li><a href="dashboard.html" class="footer-nav-link" style="color: var(--clr-bronze-light);"><i class="fas fa-layer-group" style="font-size: 0.75rem; margin-right: 0.35rem;"></i>Developer Dashboard</a></li>
+            <li><a href="admin.html" class="footer-nav-link" style="color: var(--clr-bronze-light);"><i class="fas fa-lock" style="font-size: 0.75rem; margin-right: 0.35rem;"></i>Admin Console</a></li>
           </ul>
         </div>
 
@@ -1108,5 +1277,15 @@
   <script src="js/three-particles.js"></script>
   <script src="js/animations.js"></script>
   <script src="js/app.js"></script>
+
+  <!-- 5. Supabase Client & Dynamic Projects Engine -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+  <script>
+    if (typeof supabase === 'undefined') {
+      document.write('<script src="js/vendor/supabase.min.js"><\/script>');
+    }
+  </script>
+  <script src="js/supabase-config.js"></script>
+  <script src="js/portfolio-projects.js"></script>
 </body>
 </html>

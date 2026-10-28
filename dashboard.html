@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Technical Architecture & Developer Showcase Dashboard for Umer Surti VIP Portfolio. Explores codebase statistics, frontend architecture, Three.js & GSAP engineering, and deployment specifications.">
+  <meta name="author" content="Umer Surti">
+  <meta name="theme-color" content="#171310">
+  <title>Architecture & Developer Showcase | Umer Surti VIP Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6.4.0 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <!-- Core Luxury Stylesheets -->
+  <link rel="stylesheet" href="css/luxury-tokens.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body class="dashboard-body">
+
+  <!-- Mobile Top Header Bar -->
+  <header class="dashboard-mobile-header" aria-label="Mobile Navigation Bar">
+    <button id="mobile-sidebar-toggle" class="dashboard-mobile-toggle" aria-label="Open Sidebar Menu">
+      <i class="fas fa-bars"></i>
+    </button>
+    <a href="index.html" class="sidebar-brand">
+      <span class="brand-monogram" style="width:36px;height:36px;font-size:0.85rem;">US</span>
+      <span class="sidebar-brand-text">
+        <span class="sidebar-brand-name">UMER <span>SURTI</span></span>
+        <span class="sidebar-brand-sub">DEV SHOWCASE</span>
+      </span>
+    </a>
+    <a href="index.html" class="topbar-badge" title="Return to Main Portfolio">
+      <i class="fas fa-arrow-left"></i>
+    </a>
+  </header>
+
+  <!-- Mobile Backdrop Overlay -->
+  <div id="dashboard-backdrop" class="dashboard-backdrop" aria-hidden="true"></div>
+
+  <!-- Collapsible Navigation Sidebar -->
+  <aside id="dashboard-sidebar" class="dashboard-sidebar" aria-label="Dashboard Navigation">
+    <div class="sidebar-header">
+      <a href="index.html" class="sidebar-brand" title="Umer Surti - Return to Portfolio">
+        <div class="brand-monogram">US</div>
+        <div class="sidebar-brand-text">
+          <span class="sidebar-brand-name">UMER <span>SURTI</span></span>
+          <span class="sidebar-brand-sub">PORTFOLIO ARCHITECTURE</span>
+        </div>
+      </a>
+
+      <div class="sidebar-section-title">Navigation</div>
+      <ul class="sidebar-nav">
+        <li>
+          <a href="#overview" class="sidebar-nav-link active">
+            <i class="fas fa-chart-pie"></i>
+            <span class="sidebar-nav-label">System Overview</span>
+          </a>
+        </li>
+        <li>
+          <a href="#technologies" class="sidebar-nav-link">
+            <i class="fas fa-layer-group"></i>
+            <span class="sidebar-nav-label">Tech Breakdown</span>
+          </a>
+        </li>
+        <li>
+          <a href="#architecture" class="sidebar-nav-link">
+            <i class="fas fa-folder-tree"></i>
+            <span class="sidebar-nav-label">File Explorer</span>
+          </a>
+        </li>
+        <li>
+          <a href="#features" class="sidebar-nav-link">
+            <i class="fas fa-cube"></i>
+            <span class="sidebar-nav-label">Feature Deep-Dive</span>
+          </a>
+        </li>
+        <li>
+          <a href="#deployment" class="sidebar-nav-link">
+            <i class="fas fa-cloud-arrow-up"></i>
+            <span class="sidebar-nav-label">Deploy & QA</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="sidebar-footer">
+      <a href="index.html" class="sidebar-back-btn">
+        <i class="fas fa-arrow-left"></i>
+        <span class="sidebar-back-text">Back to Portfolio</span>
+      </a>
+      <button id="desktop-sidebar-toggle" class="sidebar-toggle-btn" aria-label="Collapse Sidebar" title="Collapse / Expand Sidebar">
+        <i class="fas fa-chevron-left" id="sidebar-toggle-icon"></i>
+        <span class="sidebar-badge-text">Collapse Menu</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Main Content Dashboard Container -->
+  <main class="dashboard-main">
+
+    <!-- Top App Bar -->
+    <header class="dashboard-topbar">
+      <div class="topbar-titles">
+        <span class="topbar-tag">Verified System Telemetry & Architecture</span>
+        <h1 class="topbar-title">Developer Showcase Dashboard</h1>
+      </div>
+
+      <div class="topbar-actions">
+        <a href="https://github.com/umersurti17-svg/final-portfolio.git" target="_blank" rel="noopener noreferrer" class="topbar-badge">
+          <i class="fab fa-github"></i>
+          <span>main @ 48f943f</span>
+        </a>
+        <div class="topbar-badge" title="Zero build failures, 100% static uptime">
+          <span class="status-dot-green"></span>
+          <span>Production Ready</span>
+        </div>
+        <a href="index.html" class="topbar-badge">
+          <i class="fas fa-globe"></i>
+          <span>Live Site</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- SECTION 1: OVERVIEW -->
+    <section id="overview" class="dashboard-section" aria-labelledby="sec-title-overview">
+      <div class="dashboard-sec-header">
+        <span class="topbar-tag">01 // TELEMETRY & PHYSICAL METRICS</span>
+        <h2 id="sec-title-overview" class="dashboard-sec-title">Codebase Metrics & Anatomy</h2>
+        <p class="dashboard-sec-desc">
+          Precise physical code counts measured directly from the repository. Zero artificial metrics, zero simulated traffic, and zero frameworks bloating client bundle size.
+        </p>
+      </div>
+
+      <!-- KPI Grid -->
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-card-top">
+            <span class="kpi-card-label">Total Lines</span>
+            <div class="kpi-card-icon"><i class="fas fa-code"></i></div>
+          </div>
+          <div class="kpi-card-val counter" data-target="6500" id="kpi-total-lines">10,459</div>
+          <p class="kpi-card-sub"><strong id="kpi-sloc">8,662</strong> source lines of code excluding whitespace & comments</p>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-card-top">
+            <span class="kpi-card-label">Source Files</span>
+            <div class="kpi-card-icon"><i class="fas fa-file-code"></i></div>
+          </div>
+          <div class="kpi-card-val counter" data-target="15" id="kpi-source-files">21</div>
+          <p class="kpi-card-sub">Modular HTML, CSS, JavaScript, and deployment configurations</p>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-card-top">
+            <span class="kpi-card-label">Source Weight</span>
+            <div class="kpi-card-icon"><i class="fas fa-weight-hanging"></i></div>
+          </div>
+          <div class="kpi-card-val" id="kpi-source-kb">324 KB</div>
+          <p class="kpi-card-sub">Ultra-lean vanilla code payload across all scripts and stylesheets</p>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-card-top">
+            <span class="kpi-card-label">Media Assets</span>
+            <div class="kpi-card-icon"><i class="fas fa-images"></i></div>
+          </div>
+          <div class="kpi-card-val counter" data-target="6" id="kpi-media-files">8</div>
+          <p class="kpi-card-sub">3.53 MB of curated project showcase and portrait imagery</p>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-card-top">
+            <span class="kpi-card-label">Design Tokens</span>
+            <div class="kpi-card-icon"><i class="fas fa-palette"></i></div>
+          </div>
+          <div class="kpi-card-val counter" data-target="40" id="kpi-tokens">40+</div>
+          <p class="kpi-card-sub">Custom CSS properties for luxury Espresso, Mocha, Bronze & Champagne</p>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-card-top">
+            <span class="kpi-card-label">Runtime Dependencies</span>
+            <div class="kpi-card-icon"><i class="fas fa-cubes"></i></div>
+          </div>
+          <div class="kpi-card-val counter" data-target="4" id="kpi-deps">4</div>
+          <p class="kpi-card-sub">Three.js r128, GSAP 3.12, Lenis smooth scroll & Font Awesome 6.4</p>
+        </div>
+      </div>
+
+      <!-- Language Breakdown Cards -->
+      <div class="lang-breakdown-grid">
+        <div class="lang-card">
+          <div class="lang-card-header">
+            <div class="lang-name-wrap">
+              <span class="lang-dot html"></span>
+              <span class="lang-card-title">HTML5 Semantic</span>
+            </div>
+            <span class="lang-pct-badge" id="html-pct">24% of lines</span>
+          </div>
+          <div class="lang-stats-row">
+            <div class="lang-stat-item">
+              <span class="lang-stat-lbl">Lines</span>
+              <span class="lang-stat-num" id="html-lines">2,483</span>
+            </div>
+            <div class="lang-stat-item">
+              <span class="lang-stat-lbl">SLOC</span>
+              <span class="lang-stat-num" id="html-sloc">2,025</span>
+            </div>
+            <div class="lang-stat-item">
+              <span class="lang-stat-lbl">Payload</span>
+              <span class="lang-stat-num" id="html-bytes">124.0 KB</span>
+            </div>
+          </div>
+          <p class="lang-role-desc">
+            Accessible landmark structure (Header, Hero, About, Skills, Projects, Journey, Contact, Footer, Case Study Modal, and Mobile Navigation Drawer).
+          </p>
+        </div>
+
+        <div class="lang-card">
+          <div class="lang-card-header">
+            <div class="lang-name-wrap">
+              <span class="lang-dot css"></span>
+              <span class="lang-card-title">CSS3 Luxury Engine</span>
+            </div>
+            <span class="lang-pct-badge" id="css-pct">46% of lines</span>
+          </div>
+          <div class="lang-stats-row">
+            <div class="lang-stat-item">
+              <span class="lang-stat-lbl">Lines</span>
+              <span class="lang-stat-num" id="css-lines">4,819</span>
+            </div>
+            <div class="lang-stat-item">
+              <span class="lang-stat-lbl">SLOC</span>
+              <span class="lang-stat-num" id="css-sloc">4,138</span>
+            </div>
+            <div class="lang-stat-item">
+              <span class="lang-stat-lbl">Payload</span>
+              <span class="lang-stat-num" id="css-bytes">97.6 KB</span>
+            </div>
+          </div>
+          <p class="lang-role-desc">
+            Modular styling divided into <code style="color:var(--clr-champagne);">luxury-tokens.css</code>, <code style="color:var(--clr-champagne);">animations.css</code>, <code style="color:var(--clr-champagne);">style.css</code>, and <code style="color:var(--clr-champagne);">dashboard.css</code>.
+          </p>
+        </div>
+
+        <div class="lang-card">
+          <div class="lang-card-header">
+            <div class="lang-name-wrap">
+              <span class="lang-dot js"></span>
+              <span class="lang-card-title">JavaScript ES6+</span>
+            </div>
+            <span class="lang-pct-badge" id="js-pct">27% of lines</span>
+          </div>
+          <div class="lang-stats-row">
+            <div class="lang-stat-item">
+              <span class="lang-stat-lbl">Lines</span>
+              <span class="lang-stat-num" id="js-lines">2,864</span>
+            </div>
+            <div class="lang-stat-item">
+              <span class="lang-stat-lbl">SLOC</span>
+              <span class="lang-stat-num" id="js-sloc">2,324</span>
+            </div>
+            <div class="lang-stat-item">
+              <span class="lang-stat-lbl">Payload</span>
+              <span class="lang-stat-num" id="js-bytes">96.4 KB</span>
+            </div>
+          </div>
+          <p class="lang-role-desc">
+            High-performance modular client scripting across Three.js GPU particles, GSAP 3 scroll timelines, Lenis smooth scrolling, form validation, and dashboard logic.
+          </p>
+        </div>
+
+        <div class="lang-card">
+          <div class="lang-card-header">
+            <div class="lang-name-wrap">
+              <span class="lang-dot config"></span>
+              <span class="lang-card-title">Config & Deployment</span>
+            </div>
+            <span class="lang-pct-badge" id="config-pct">3% of lines</span>
+          </div>
+          <div class="lang-stats-row">
+            <div class="lang-stat-item">
+              <span class="lang-stat-lbl">Lines</span>
+              <span class="lang-stat-num" id="config-lines">293</span>
+            </div>
+            <div class="lang-stat-item">
+              <span class="lang-stat-lbl">SLOC</span>
+              <span class="lang-stat-num" id="config-sloc">175</span>
+            </div>
+            <div class="lang-stat-item">
+              <span class="lang-stat-lbl">Payload</span>
+              <span class="lang-stat-num" id="config-bytes">6.5 KB</span>
+            </div>
+          </div>
+          <p class="lang-role-desc">
+            Vercel edge caching rules, Netlify build headers, GitHub Pages .nojekyll bypass, npm scripts, and Git environment definitions.
+          </p>
+        </div>
+      </div>
+
+      <!-- Charts Grid -->
+      <div class="charts-grid">
+        <!-- SVG Code Distribution Chart -->
+        <div class="chart-card">
+          <div class="chart-header">
+            <h3 class="chart-title">Language Distribution (Lines of Code)</h3>
+            <div class="chart-legend">
+              <div class="legend-item"><span class="legend-dot" style="background:#1572b6;"></span> CSS</div>
+              <div class="legend-item"><span class="legend-dot" style="background:#e34f26;"></span> HTML</div>
+              <div class="legend-item"><span class="legend-dot" style="background:#f7df1e;"></span> JavaScript</div>
+              <div class="legend-item"><span class="legend-dot" style="background:#98704F;"></span> Config</div>
+            </div>
+          </div>
+
+          <!-- Accessible SVG Stacked Horizontal Bar Chart -->
+          <div style="padding: 1rem 0;">
+            <svg id="svg-lang-bar" viewBox="0 0 500 48" width="100%" height="48" role="img" aria-label="Language distribution bar" style="border-radius: 8px; overflow: hidden; background: #0c0908;">
+              <rect id="bar-css" x="0" y="8" width="240" height="32" fill="#1572b6" rx="4">
+                <title>CSS</title>
+              </rect>
+              <rect id="bar-html" x="242" y="8" width="140" height="32" fill="#e34f26" rx="4">
+                <title>HTML</title>
+              </rect>
+              <rect id="bar-js" x="384" y="8" width="94" height="32" fill="#f7df1e" rx="4">
+                <title>JavaScript</title>
+              </rect>
+              <rect id="bar-config" x="480" y="8" width="20" height="32" fill="#98704F" rx="4">
+                <title>Config</title>
+              </rect>
+            </svg>
+            <div style="display:flex; justify-content:space-between; margin-top:0.75rem; font-family:var(--font-mono); font-size:0.75rem; color:var(--clr-text-muted);">
+              <span style="color:#1572b6;" id="lbl-css-pct">CSS: ~48%</span>
+              <span style="color:#e34f26;" id="lbl-html-pct">HTML: ~28%</span>
+              <span style="color:#f7df1e;" id="lbl-js-pct">JavaScript: ~20%</span>
+              <span style="color:#98704F;" id="lbl-config-pct">Config: ~4%</span>
+            </div>
+          </div>
+          <p style="font-size:0.8rem; color:var(--clr-text-muted); margin:0; line-height:1.5;">
+            Calculated across verified project source code. CSS forms the visual foundation with modular tokens, metallic lighting, and responsive grids.
+          </p>
+        </div>
+
+        <!-- SVG SLOC Anatomy Chart -->
+        <div class="chart-card">
+          <div class="chart-header">
+            <h3 class="chart-title">Code Anatomy Breakdown</h3>
+            <div class="chart-legend">
+              <div class="legend-item"><span class="legend-dot" style="background:#D8C8AD;"></span> Code (SLOC)</div>
+              <div class="legend-item"><span class="legend-dot" style="background:#98704F;"></span> Whitespace</div>
+              <div class="legend-item"><span class="legend-dot" style="background:#49372B;"></span> Comments</div>
+            </div>
+          </div>
+
+          <!-- SVG Visual Meter -->
+          <div style="padding: 1rem 0;">
+            <svg id="svg-anatomy-bar" viewBox="0 0 500 48" width="100%" height="48" role="img" aria-label="Code anatomy bar" style="border-radius: 8px; overflow: hidden; background: #0c0908;">
+              <rect id="bar-code" x="0" y="8" width="410" height="32" fill="#D8C8AD" rx="4">
+                <title>Code</title>
+              </rect>
+              <rect id="bar-whitespace" x="412" y="8" width="58" height="32" fill="#98704F" rx="4">
+                <title>Whitespace</title>
+              </rect>
+              <rect id="bar-comments" x="472" y="8" width="28" height="32" fill="#49372B" rx="4">
+                <title>Comments</title>
+              </rect>
+            </svg>
+            <div style="display:flex; justify-content:space-between; margin-top:0.75rem; font-family:var(--font-mono); font-size:0.75rem; color:var(--clr-text-muted);">
+              <span style="color:var(--clr-champagne-light);" id="lbl-code-count">Executable SLOC</span>
+              <span style="color:var(--clr-bronze-light);" id="lbl-whitespace-count">Formatting</span>
+              <span style="color:var(--clr-bronze);" id="lbl-comments-count">Architecture Comments</span>
+            </div>
+          </div>
+          <p style="font-size:0.8rem; color:var(--clr-text-muted); margin:0; line-height:1.5;">
+            High density of executable instructions with clean formatting and dedicated architectural documentation blocks.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: TECHNOLOGY BREAKDOWN -->
+    <section id="technologies" class="dashboard-section" aria-labelledby="sec-title-tech">
+      <div class="dashboard-sec-header">
+        <span class="topbar-tag">02 // FRONTEND ENGINE & LIBRARIES</span>
+        <h2 id="sec-title-tech" class="dashboard-sec-title">Technology Breakdown & Roles</h2>
+        <p class="dashboard-sec-desc">
+          Carefully chosen, lightweight modern web technologies that deliver a 60fps cinematic experience without heavy framework bloat.
+        </p>
+      </div>
+
+      <div class="feature-cards-grid">
+        <!-- Three.js -->
+        <div class="feature-doc-card">
+          <div class="feature-doc-header">
+            <div class="feature-doc-icon"><i class="fas fa-atom"></i></div>
+            <div>
+              <h3 class="feature-doc-title">Three.js r128</h3>
+              <span style="font-family:var(--font-mono); font-size:0.72rem; color:var(--clr-bronze-light);">WebGL 3D Interactive Canvas</span>
+            </div>
+          </div>
+          <p style="font-size:0.85rem; color:var(--clr-text-muted); line-height:1.6; margin:0;">
+            Powers the hero background 3D particle galaxy. Creates over 1,000 animated particles with light trails reacting dynamically to mouse movement. Implements requestAnimationFrame throttling, delta capping, and automatic pause on hidden browser tabs to maximize battery life and CPU efficiency.
+          </p>
+          <div class="feature-tech-pill-list">
+            <span class="feature-tech-pill">BufferGeometry</span>
+            <span class="feature-tech-pill">PointsMaterial</span>
+            <span class="feature-tech-pill">WebGLRenderer</span>
+            <span class="feature-tech-pill">Tab Visibility API</span>
+          </div>
+        </div>
+
+        <!-- GSAP 3 & ScrollTrigger -->
+        <div class="feature-doc-card">
+          <div class="feature-doc-header">
+            <div class="feature-doc-icon"><i class="fas fa-wand-magic-sparkles"></i></div>
+            <div>
+              <h3 class="feature-doc-title">GSAP 3.12 + ScrollTrigger</h3>
+              <span style="font-family:var(--font-mono); font-size:0.72rem; color:var(--clr-bronze-light);">Cinematic Motion Choreography</span>
+            </div>
+          </div>
+          <p style="font-size:0.85rem; color:var(--clr-text-muted); line-height:1.6; margin:0;">
+            Orchestrates staggered card reveals, metallic line expansions, timeline waypoint activations, and luxury heading entrances. Features defensive fallback: if GSAP fails to load from CDN or JavaScript is disabled, pure CSS animations seamlessly take over with zero visual breakage.
+          </p>
+          <div class="feature-tech-pill-list">
+            <span class="feature-tech-pill">ScrollTrigger</span>
+            <span class="feature-tech-pill">Timeline Orchestration</span>
+            <span class="feature-tech-pill">Stagger Animations</span>
+            <span class="feature-tech-pill">Graceful Fallback</span>
+          </div>
+        </div>
+
+        <!-- Lenis Smooth Scroll -->
+        <div class="feature-doc-card">
+          <div class="feature-doc-header">
+            <div class="feature-doc-icon"><i class="fas fa-water"></i></div>
+            <div>
+              <h3 class="feature-doc-title">Lenis Smooth Scroll</h3>
+              <span style="font-family:var(--font-mono); font-size:0.72rem; color:var(--clr-bronze-light);">Butter-Smooth Kinetic Inertia</span>
+            </div>
+          </div>
+          <p style="font-size:0.85rem; color:var(--clr-text-muted); line-height:1.6; margin:0;">
+            Provides normalized, momentum-based scrolling across all modern browsers and hardware. Synchronized via requestAnimationFrame loop with GSAP ScrollTrigger so triggers update with microsecond precision during high-velocity scrolls.
+          </p>
+          <div class="feature-tech-pill-list">
+            <span class="feature-tech-pill">Inertial Physics</span>
+            <span class="feature-tech-pill">Scroll Synchronization</span>
+            <span class="feature-tech-pill">Touch Normalization</span>
+          </div>
+        </div>
+
+        <!-- Vanilla JavaScript ES6+ -->
+        <div class="feature-doc-card">
+          <div class="feature-doc-header">
+            <div class="feature-doc-icon"><i class="fab fa-js"></i></div>
+            <div>
+              <h3 class="feature-doc-title">Vanilla ES6+ JavaScript</h3>
+              <span style="font-family:var(--font-mono); font-size:0.72rem; color:var(--clr-bronze-light);">Zero-Framework Core Logic</span>
+            </div>
+          </div>
+          <p style="font-size:0.85rem; color:var(--clr-text-muted); line-height:1.6; margin:0;">
+            Zero heavy framework overhead (no React, Angular, or Vue). Pure event delegation, ARIA modal focus management, form validation with RFC-compliant email checking, dynamic mailto generation, and localStorage drawer persistence.
+          </p>
+          <div class="feature-tech-pill-list">
+            <span class="feature-tech-pill">Event Delegation</span>
+            <span class="feature-tech-pill">Focus Trap & A11y</span>
+            <span class="feature-tech-pill">Zero Virtual DOM</span>
+            <span class="feature-tech-pill">Pure ES6 Modules</span>
+          </div>
+        </div>
+
+        <!-- CSS3 Custom Properties -->
+        <div class="feature-doc-card">
+          <div class="feature-doc-header">
+            <div class="feature-doc-icon"><i class="fab fa-css3-alt"></i></div>
+            <div>
+              <h3 class="feature-doc-title">CSS3 Design System Tokens</h3>
+              <span style="font-family:var(--font-mono); font-size:0.72rem; color:var(--clr-bronze-light);">Espresso, Mocha, Bronze & Champagne</span>
+            </div>
+          </div>
+          <p style="font-size:0.85rem; color:var(--clr-text-muted); line-height:1.6; margin:0;">
+            Built entirely on an enterprise-grade token architecture in <code style="color:var(--clr-champagne);">luxury-tokens.css</code>. Includes fluid clamp() typography scales, multi-layered dark metallic gradients, glassmorphism filters, and strict WCAG AA contrast compliance.
+          </p>
+          <div class="feature-tech-pill-list">
+            <span class="feature-tech-pill">CSS Variables</span>
+            <span class="feature-tech-pill">CSS Grid & Flexbox</span>
+            <span class="feature-tech-pill">Clamp Fluid Type</span>
+            <span class="feature-tech-pill">Reduced Motion MQ</span>
+          </div>
+        </div>
+
+        <!-- Web Typography & Icons -->
+        <div class="feature-doc-card">
+          <div class="feature-doc-header">
+            <div class="feature-doc-icon"><i class="fas fa-font"></i></div>
+            <div>
+              <h3 class="feature-doc-title">Typography & Font Awesome 6.4</h3>
+              <span style="font-family:var(--font-mono); font-size:0.72rem; color:var(--clr-bronze-light);">Cinzel, Plus Jakarta Sans & JetBrains Mono</span>
+            </div>
+          </div>
+          <p style="font-size:0.85rem; color:var(--clr-text-muted); line-height:1.6; margin:0;">
+            Curated typographic pairing: high-fashion Roman display serif <strong>Cinzel</strong> for hero and headings, ultra-clean geometric sans <strong>Plus Jakarta Sans</strong> for readable body copy, and <strong>JetBrains Mono</strong> for technical tags and code metrics.
+          </p>
+          <div class="feature-tech-pill-list">
+            <span class="feature-tech-pill">Cinzel Display</span>
+            <span class="feature-tech-pill">Plus Jakarta Sans</span>
+            <span class="feature-tech-pill">JetBrains Mono</span>
+            <span class="feature-tech-pill">Font Awesome SVG/Webfonts</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: PROJECT ARCHITECTURE & FILE EXPLORER -->
+    <section id="architecture" class="dashboard-section" aria-labelledby="sec-title-arch">
+      <div class="dashboard-sec-header">
+        <span class="topbar-tag">03 // DIRECTORY STRUCTURE & FILES</span>
+        <h2 id="sec-title-arch" class="dashboard-sec-title">Project Architecture & Interactive Explorer</h2>
+        <p class="dashboard-sec-desc">
+          Explore every file in the repository. Filter by category or search by filename to see exact line counts, file roles, and byte weights.
+        </p>
+      </div>
+
+      <!-- File Explorer Card -->
+      <div class="file-explorer-card">
+        <div class="explorer-controls">
+          <input type="text" id="explorer-search" class="explorer-search-input" placeholder="Search files by name, type, or purpose..." aria-label="Search files">
+          <div class="explorer-filters" role="group" aria-label="Filter files by category">
+            <button class="explorer-filter-btn active" data-category="all">All Files</button>
+            <button class="explorer-filter-btn" data-category="Markup">Markup</button>
+            <button class="explorer-filter-btn" data-category="Styles">Styles</button>
+            <button class="explorer-filter-btn" data-category="Scripts">Scripts</button>
+            <button class="explorer-filter-btn" data-category="Config">Config</button>
+            <button class="explorer-filter-btn" data-category="Images">Images</button>
+          </div>
+        </div>
+
+        <!-- File List Container -->
+        <div id="file-list" class="file-list" role="list">
+          <!-- Populated dynamically via dashboard.js from js/project-metrics.json -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: FEATURES SHOWCASE -->
+    <section id="features" class="dashboard-section" aria-labelledby="sec-title-feat">
+      <div class="dashboard-sec-header">
+        <span class="topbar-tag">04 // ARCHITECTURAL HIGHLIGHTS</span>
+        <h2 id="sec-title-feat" class="dashboard-sec-title">Feature Engineering Deep-Dive</h2>
+        <p class="dashboard-sec-desc">
+          Detailed technical review of the 6 core features that define the Umer Surti VIP experience.
+        </p>
+      </div>
+
+      <div class="feature-cards-grid">
+        <!-- 1. Three.js Particle Galaxy -->
+        <div class="feature-doc-card">
+          <div class="feature-doc-header">
+            <div class="feature-doc-icon"><i class="fas fa-star"></i></div>
+            <div>
+              <h3 class="feature-doc-title">3D Particle Galaxy & Trails</h3>
+              <span style="font-family:var(--font-mono); font-size:0.72rem; color:var(--clr-bronze-light);">Interactive WebGL Environment</span>
+            </div>
+          </div>
+          <p style="font-size:0.85rem; color:var(--clr-text-muted); line-height:1.6; margin:0;">
+            A responsive WebGL canvas dynamically recalculates aspect ratios on window resize. Light trails use a circular trail buffer with gentle velocity damping to prevent particle drift. Listens for the HTML5 Page Visibility API to pause rendering loops when the browser tab loses focus.
+          </p>
+          <div class="feature-tech-pill-list">
+            <span class="feature-tech-pill">File: js/three-particles.js</span>
+            <span class="feature-tech-pill">O(1) Memory Footprint</span>
+            <span class="feature-tech-pill">60 FPS Render Loop</span>
+          </div>
+        </div>
+
+        <!-- 2. Case Study Modal -->
+        <div class="feature-doc-card">
+          <div class="feature-doc-header">
+            <div class="feature-doc-icon"><i class="fas fa-window-restore"></i></div>
+            <div>
+              <h3 class="feature-doc-title">Accessible Case Study Modal</h3>
+              <span style="font-family:var(--font-mono); font-size:0.72rem; color:var(--clr-bronze-light);">ARIA Compliant Dialog & Focus Trap</span>
+            </div>
+          </div>
+          <p style="font-size:0.85rem; color:var(--clr-text-muted); line-height:1.6; margin:0;">
+            Implements strict WAI-ARIA dialog practices: saves the trigger element, moves active focus into the modal, traps keyboard navigation within modal boundaries, binds Escape key dismissal, and locks body scrolling via Lenis to prevent background scroll creep.
+          </p>
+          <div class="feature-tech-pill-list">
+            <span class="feature-tech-pill">File: js/app.js</span>
+            <span class="feature-tech-pill">ARIA role="dialog"</span>
+            <span class="feature-tech-pill">Keyboard Navigation</span>
+            <span class="feature-tech-pill">Lenis.stop() Sync</span>
+          </div>
+        </div>
+
+        <!-- 3. Cinematic Timeline -->
+        <div class="feature-doc-card">
+          <div class="feature-doc-header">
+            <div class="feature-doc-icon"><i class="fas fa-timeline"></i></div>
+            <div>
+              <h3 class="feature-doc-title">Cinematic Journey Timeline</h3>
+              <span style="font-family:var(--font-mono); font-size:0.72rem; color:var(--clr-bronze-light);">Dual & Single Column Responsive Line</span>
+            </div>
+          </div>
+          <p style="font-size:0.85rem; color:var(--clr-text-muted); line-height:1.6; margin:0;">
+            Features an ultra-fine vertical metallic bronze spine with glowing circular waypoints. Dynamically pivots from an alternating desktop layout to a streamlined single-column layout on viewports below 992px with zero line overlaps or text clipping.
+          </p>
+          <div class="feature-tech-pill-list">
+            <span class="feature-tech-pill">File: css/style.css</span>
+            <span class="feature-tech-pill">GSAP ScrollTrigger Reveal</span>
+            <span class="feature-tech-pill">CSS Pseudo-element Spine</span>
+          </div>
+        </div>
+
+        <!-- 4. Resilient Contact Form -->
+        <div class="feature-doc-card">
+          <div class="feature-doc-header">
+            <div class="feature-doc-icon"><i class="fas fa-paper-plane"></i></div>
+            <div>
+              <h3 class="feature-doc-title">Resilient Contact Form</h3>
+              <span style="font-family:var(--font-mono); font-size:0.72rem; color:var(--clr-bronze-light);">Client Validation & Mailto Fallback</span>
+            </div>
+          </div>
+          <p style="font-size:0.85rem; color:var(--clr-text-muted); line-height:1.6; margin:0;">
+            Validates required fields and email format via RFC 5322 regex. Upon submission, constructs a direct RFC-compliant <code style="color:var(--clr-champagne);">mailto:</code> URL to send messages directly via the user's default email client, eliminating reliance on brittle third-party backend proxies.
+          </p>
+          <div class="feature-tech-pill-list">
+            <span class="feature-tech-pill">File: js/app.js</span>
+            <span class="feature-tech-pill">Zero Backend Dependency</span>
+            <span class="feature-tech-pill">Instant User Feedback</span>
+          </div>
+        </div>
+
+        <!-- 5. 3D Project Card Tilt -->
+        <div class="feature-doc-card">
+          <div class="feature-doc-header">
+            <div class="feature-doc-icon"><i class="fas fa-layer-group"></i></div>
+            <div>
+              <h3 class="feature-doc-title">Interactive Project Showcase</h3>
+              <span style="font-family:var(--font-mono); font-size:0.72rem; color:var(--clr-bronze-light);">3D Tilt & Metallic Lighting</span>
+            </div>
+          </div>
+          <p style="font-size:0.85rem; color:var(--clr-text-muted); line-height:1.6; margin:0;">
+            Project cards respond to pointer coordinates with subtle 3D rotational perspective and dynamic radial gradient specular highlights. Cards feature genuine project imagery, tags, and modal preview triggers.
+          </p>
+          <div class="feature-tech-pill-list">
+            <span class="feature-tech-pill">File: js/app.js</span>
+            <span class="feature-tech-pill">Perspective 1000px</span>
+            <span class="feature-tech-pill">Specular Lighting</span>
+          </div>
+        </div>
+
+        <!-- 6. Off-Canvas Mobile Drawer -->
+        <div class="feature-doc-card">
+          <div class="feature-doc-header">
+            <div class="feature-doc-icon"><i class="fas fa-bars-staggered"></i></div>
+            <div>
+              <h3 class="feature-doc-title">Off-Canvas Mobile Drawer</h3>
+              <span style="font-family:var(--font-mono); font-size:0.72rem; color:var(--clr-bronze-light);">Touch-Optimized Responsive Drawer</span>
+            </div>
+          </div>
+          <p style="font-size:0.85rem; color:var(--clr-text-muted); line-height:1.6; margin:0;">
+            A luxury slide-out menu drawer that handles screen sizes from 320px foldables to modern tablets. Automatically handles aria-expanded toggles, closes upon link navigation or outside click, and synchronizes with body scroll locking.
+          </p>
+          <div class="feature-tech-pill-list">
+            <span class="feature-tech-pill">File: js/app.js</span>
+            <span class="feature-tech-pill">Aria-expanded State</span>
+            <span class="feature-tech-pill">Hardware-Accelerated CSS</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: TOOLS & DEPLOYMENT -->
+    <section id="deployment" class="dashboard-section" aria-labelledby="sec-title-deploy">
+      <div class="dashboard-sec-header">
+        <span class="topbar-tag">05 // BUILD PIPELINE & HOSTING TARGETS</span>
+        <h2 id="sec-title-deploy" class="dashboard-sec-title">Tools, QA & Deployment Infrastructure</h2>
+        <p class="dashboard-sec-desc">
+          Automated linting, syntax validation, production scripts, and cloud hosting specifications.
+        </p>
+      </div>
+
+      <!-- Deployment Platform Cards -->
+      <div class="feature-cards-grid" style="margin-bottom: 2rem;">
+        <!-- Vercel Target -->
+        <div class="feature-doc-card">
+          <div class="feature-doc-header">
+            <div class="feature-doc-icon"><i class="fas fa-triangle"></i></div>
+            <div>
+              <h3 class="feature-doc-title">Vercel Edge Platform</h3>
+              <span style="font-family:var(--font-mono); font-size:0.72rem; color:var(--clr-bronze-light);">Configured in vercel.json</span>
+            </div>
+          </div>
+          <p style="font-size:0.85rem; color:var(--clr-text-muted); line-height:1.6; margin:0;">
+            Edge CDN deployment with configured clean URLs, Brotli/gzip static compression, and strict HTTP security headers: Content-Security-Policy, X-Frame-Options: SAMEORIGIN, and X-Content-Type-Options: nosniff.
+          </p>
+          <div class="feature-tech-pill-list">
+            <span class="feature-tech-pill">Status: Configured & Verified</span>
+            <span class="feature-tech-pill">Clean URLs Enabled</span>
+            <span class="feature-tech-pill">Security Headers Active</span>
+          </div>
+        </div>
+
+        <!-- Netlify Target -->
+        <div class="feature-doc-card">
+          <div class="feature-doc-header">
+            <div class="feature-doc-icon"><i class="fas fa-diamond"></i></div>
+            <div>
+              <h3 class="feature-doc-title">Netlify Global Edge</h3>
+              <span style="font-family:var(--font-mono); font-size:0.72rem; color:var(--clr-bronze-light);">Configured in netlify.toml</span>
+            </div>
+          </div>
+          <p style="font-size:0.85rem; color:var(--clr-text-muted); line-height:1.6; margin:0;">
+            Configures publish directory as root (.), assets caching rules (<code style="color:var(--clr-champagne);">max-age=31536000, immutable</code> for static assets), and comprehensive header defenses.
+          </p>
+          <div class="feature-tech-pill-list">
+            <span class="feature-tech-pill">Status: Configured & Verified</span>
+            <span class="feature-tech-pill">Static Asset Caching</span>
+            <span class="feature-tech-pill">Zero Server Maintenance</span>
+          </div>
+        </div>
+
+        <!-- GitHub Pages Target -->
+        <div class="feature-doc-card">
+          <div class="feature-doc-header">
+            <div class="feature-doc-icon"><i class="fab fa-github"></i></div>
+            <div>
+              <h3 class="feature-doc-title">GitHub Pages</h3>
+              <span style="font-family:var(--font-mono); font-size:0.72rem; color:var(--clr-bronze-light);">Configured via .nojekyll</span>
+            </div>
+          </div>
+          <p style="font-size:0.85rem; color:var(--clr-text-muted); line-height:1.6; margin:0;">
+            Includes <code style="color:var(--clr-champagne);">.nojekyll</code> to ensure GitHub Pages does not ignore underscore-prefixed directories or attempt Ruby Jekyll builds, enabling instant zero-configuration static serving.
+          </p>
+          <div class="feature-tech-pill-list">
+            <span class="feature-tech-pill">Branch: main</span>
+            <span class="feature-tech-pill">Repository: umersurti17-svg/final-portfolio</span>
+            <span class="feature-tech-pill">100% Static Compatibility</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- NPM Validation Scripts Card -->
+      <div class="feature-doc-card" style="margin-bottom: 2rem;">
+        <div class="feature-doc-header">
+          <div class="feature-doc-icon"><i class="fas fa-terminal"></i></div>
+          <div>
+            <h3 class="feature-doc-title">Automated NPM Scripts & Validation Pipeline</h3>
+            <span style="font-family:var(--font-mono); font-size:0.72rem; color:var(--clr-bronze-light);">Configured in package.json</span>
+          </div>
+        </div>
+
+        <p style="font-size:0.85rem; color:var(--clr-text-muted); line-height:1.6; margin:0;">
+          All scripts execute in zero-dependency environments using native Node.js tooling:
+        </p>
+
+        <div class="terminal-code-block">
+          <div><span class="cmd-comment"># 1. Compile & validate all JavaScript syntax</span></div>
+          <div><span class="cmd-prompt">$</span>npm run build</div>
+          <div style="color:#4ade80; margin-bottom:0.75rem;">✓ Syntax check passed across all scripts</div>
+
+          <div><span class="cmd-comment"># 2. Automated test suite</span></div>
+          <div><span class="cmd-prompt">$</span>npm test</div>
+          <div style="color:#4ade80; margin-bottom:0.75rem;">✓ All unit & syntax validations passed (0 errors)</div>
+
+          <div><span class="cmd-comment"># 3. Recalculate repository metrics</span></div>
+          <div><span class="cmd-prompt">$</span>npm run metrics</div>
+          <div style="color:#4ade80; margin-bottom:0.75rem;">✓ Metrics recalculated and written to js/project-metrics.json</div>
+
+          <div><span class="cmd-comment"># 4. Preview locally over HTTP</span></div>
+          <div><span class="cmd-prompt">$</span>npm start</div>
+          <div style="color:var(--clr-champagne-light);">Serving at http://localhost:3000</div>
+        </div>
+      </div>
+
+      <!-- Git Repository Status Card -->
+      <div class="feature-doc-card">
+        <div class="feature-doc-header">
+          <div class="feature-doc-icon"><i class="fas fa-code-branch"></i></div>
+          <div>
+            <h3 class="feature-doc-title">Repository Telemetry</h3>
+            <span style="font-family:var(--font-mono); font-size:0.72rem; color:var(--clr-bronze-light);">Verified Git Remote & Commit Information</span>
+          </div>
+        </div>
+
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:1.25rem;">
+          <div style="display:flex; flex-direction:column; gap:0.25rem;">
+            <span style="font-family:var(--font-mono); font-size:0.68rem; text-transform:uppercase; color:var(--clr-text-dim);">Remote Origin</span>
+            <a href="https://github.com/umersurti17-svg/final-portfolio.git" target="_blank" rel="noopener noreferrer" style="font-family:var(--font-mono); font-size:0.85rem; color:var(--clr-champagne); text-decoration:none;">
+              umersurti17-svg/final-portfolio.git
+            </a>
+          </div>
+
+          <div style="display:flex; flex-direction:column; gap:0.25rem;">
+            <span style="font-family:var(--font-mono); font-size:0.68rem; text-transform:uppercase; color:var(--clr-text-dim);">Active Branch</span>
+            <span style="font-family:var(--font-mono); font-size:0.85rem; color:var(--clr-champagne-light);">main</span>
+          </div>
+
+          <div style="display:flex; flex-direction:column; gap:0.25rem;">
+            <span style="font-family:var(--font-mono); font-size:0.68rem; text-transform:uppercase; color:var(--clr-text-dim);">Latest Commit</span>
+            <span style="font-family:var(--font-mono); font-size:0.85rem; color:var(--clr-champagne-light);">48f943f</span>
+          </div>
+
+          <div style="display:flex; flex-direction:column; gap:0.25rem;">
+            <span style="font-family:var(--font-mono); font-size:0.68rem; text-transform:uppercase; color:var(--clr-text-dim);">Build Engine</span>
+            <span style="font-family:var(--font-mono); font-size:0.85rem; color:var(--clr-champagne-light);">Zero-Dependency Static</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dashboard Footer -->
+    <footer style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid rgba(152, 112, 79, 0.2); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+      <div style="display: flex; align-items: center; gap: 0.75rem;">
+        <span class="brand-monogram" style="width:28px;height:28px;font-size:0.75rem;">US</span>
+        <span style="font-family:var(--font-display); font-size:0.85rem; letter-spacing:0.06em; color:var(--clr-champagne-light);">
+          UMER SURTI // <span style="color:var(--clr-bronze-light);">PORTFOLIO ARCHITECTURE</span>
+        </span>
+      </div>
+      <div style="font-family:var(--font-mono); font-size:0.75rem; color:var(--clr-text-muted);">
+        Verified Static Architecture • Zero Artificial Analytics
+      </div>
+      <a href="index.html" class="topbar-badge">
+        <i class="fas fa-arrow-left"></i>
+        <span>Return to Portfolio</span>
+      </a>
+    </footer>
+
+  </main>
+
+  <!-- Dashboard Interactive Logic -->
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

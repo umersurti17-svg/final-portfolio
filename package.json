@@ -4,11 +4,12 @@
   "description": "Ultra-Premium VIP Developer Portfolio for Umer Surti",
   "main": "index.html",
   "scripts": {
-    "build": "node -c js/app.js && node -c js/animations.js && node -c js/three-particles.js",
+    "build": "node -c js/app.js js/animations.js js/three-particles.js js/dashboard.js js/supabase-config.js js/portfolio-projects.js js/admin.js",
     "start": "npx serve . -l 3000",
     "preview": "npx serve . -l 3000",
-    "lint": "node -c js/app.js js/animations.js js/three-particles.js",
-    "test": "node -c js/app.js && node -c js/animations.js && node -c js/three-particles.js"
+    "lint": "node -c js/app.js js/animations.js js/three-particles.js js/dashboard.js js/supabase-config.js js/portfolio-projects.js js/admin.js",
+    "test": "node -c js/app.js js/animations.js js/three-particles.js js/dashboard.js js/supabase-config.js js/portfolio-projects.js js/admin.js",
+    "metrics": "node scripts/generate-metrics.js"
   },
   "keywords": [
     "umer-surti",
